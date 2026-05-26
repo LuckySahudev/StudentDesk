@@ -1,0 +1,2 @@
+<i class="fa-solid fa-sun"></i>
+<i class="fa-solid fa-moon"></i>

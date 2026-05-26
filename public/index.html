@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudentDesk Dashboard</title>
-
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudentDesk</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo"></div>
-            <ul class="nav-links">
-                <li><button>Dashboard</button></li>
-                <li><button>Students</button></li>
-                <li><button>Teachers</button></li>
-                <li><button>Attendance</button></li>
-                <li><button>Pricing</button></li>
-            </ul>
-            <button class="logout-btn">
-                Login
-            </button>
-        </nav>
-        
-    </header>
-    <main class="main-content">
 
-    <section class="hero">
-        <h1>Welcome to StudentDesk</h1>
-        <p>
-            Manage students, teachers, attendance and more in one place.
-        </p>
+  <nav class="nav-bar">
+    <div class="logo">
+      <div class="logo-icon">
+        <i class="ti ti-school"></i>
+      </div>
+      <h1>StudentDesk</h1>
+    </div>
 
-        <button class="hero-btn">
-            Get Started
-        </button>
+    <ul class="nav-links">
+      <li><button class="active"><i class="ti ti-layout-dashboard"></i> Dashboard</button></li>
+      <li><button><i class="ti ti-users"></i> Students</button></li>
+      <li><button><i class="ti ti-chalkboard"></i> Teachers</button></li>
+      <li><button><i class="ti ti-clipboard-check"></i> Attendance</button></li>
+      <li><button><i class="ti ti-credit-card"></i> Pricing</button></li>
+    <li><button><i class="ti ti-heart"></i> Demo</button></li>
+    </ul>
+
+    <div class="access">
+      <button class="icon-btn" id="themeToggle">
+        <i class="ti ti-sun"></i>
+      </button>
+      <div class="divider"></div>
+      <button class="login-btn">
+        <i class="ti ti-login"></i> Login
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="dashboard" class="section active">
+        <h1>Command Center</h1>
+        <p>Good Morning, Admin Here's what's happening today.</p>
+        <div id="advertisment">
+            lucky
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    
+    <section id="students" class="section">
+        <h1>Scholar Hub</h1>
+        <p>Student management content here.</p>
+    </section>
+    
+    <section id="teachers" class="section">
+        <h1>Faculty Nexus</h1>
+        <p>Teachers section content here.</p>
+    </section>
+    
+    <section id="attendance" class="section">
+        <h1>Presence Tracker</h1>
+        <p>Attendance tracking content here.</p>
+    </section>
+    
+    <section id="pricing" class="section">
+        <h1>Premium Plans</h1>
+        <p>Pricing plans and details.</p>
+    </section>
+    
+    <section id="demo" class="section">
+        <h1>Experience Arena</h1>
+        <p>Demo section content.</p>
     </section>
 
-    <!-- Dashboard Cards -->
-    <section class="cards">
+  </main>
 
-        <div class="card">
-            <h2>Dashboard</h2>
-            <p>
-                View analytics, reports and overall system activity.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Students</h2>
-            <p>
-                Manage student records, profiles and performance.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Teachers</h2>
-            <p>
-                Organize teacher information and assigned classes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Attendance</h2>
-            <p>
-                Track attendance records quickly and efficiently.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Pricing</h2>
-            <p>
-                Explore plans and premium dashboard features.
-            </p>
-        </div>
-
-    </section>
-
-    </main>
+  <footer>
+    
+  </footer>
+  <script src="script.js"></script>
 
 </body>
 </html>
