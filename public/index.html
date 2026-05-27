@@ -1,84 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StudentDesk</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <nav class="nav-bar">
-    <div class="logo">
-      <div class="logo-icon">
-        <i class="ti ti-school"></i>
-      </div>
-      <h1>StudentDesk</h1>
-    </div>
-
-    <ul class="nav-links">
-      <li><button class="active"><i class="ti ti-layout-dashboard"></i> Dashboard</button></li>
-      <li><button><i class="ti ti-users"></i> Students</button></li>
-      <li><button><i class="ti ti-chalkboard"></i> Teachers</button></li>
-      <li><button><i class="ti ti-clipboard-check"></i> Attendance</button></li>
-      <li><button><i class="ti ti-credit-card"></i> Pricing</button></li>
-    <li><button><i class="ti ti-heart"></i> Demo</button></li>
-    </ul>
-
-    <div class="access">
-      <button class="icon-btn" id="themeToggle">
-        <i class="ti ti-sun"></i>
-      </button>
-      <div class="divider"></div>
-      <button class="login-btn">
-        <i class="ti ti-login"></i> Login
-      </button>
-    </div>
-  </nav>
-
-  <main>
-
-    <section id="dashboard" class="section active">
-        <h1>Command Center</h1>
-        <p>Good Morning, Admin Here's what's happening today.</p>
-        <div id="advertisment">
-            lucky
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentDesk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="ti ti-school"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </section>
-    
-    <section id="students" class="section">
+        <h1>StudentDesk</h1>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <button class="link-btn active">
+            <i class="ti ti-layout-dashboard"></i> Dashboard
+          </button>
+        </li>
+        <li>
+          <button class="link-btn"><i class="ti ti-users"></i> Students</button>
+        </li>
+        <li>
+          <button class="link-btn">
+            <i class="ti ti-chalkboard"></i> Teachers
+          </button>
+        </li>
+        <li>
+          <button class="link-btn">
+            <i class="ti ti-clipboard-check"></i> Attendance
+          </button>
+        </li>
+        <li>
+          <button class="link-btn">
+            <i class="ti ti-credit-card"></i> Pricing
+          </button>
+        </li>
+        <li>
+          <button class="link-btn"><i class="ti ti-heart"></i> Demo</button>
+        </li>
+      </ul>
+
+      <div class="access">
+        <button class="icon-btn" id="themeToggle">
+          <i class="ti ti-sun"></i>
+        </button>
+        <div class="divider"></div>
+        <button class="login-btn"><i class="ti ti-login"></i> Login</button>
+      </div>
+    </nav>
+
+    <main>
+      <section id="dashboard" class="section active">
+        <div class="dashboard-header">
+          <h1>Command Center</h1>
+          <p>Good Morning, Admin — Here's what's happening today.</p>
+        </div>
+
+        <div class="advertisement-box">
+          <div id="ad-1" class="advertisement-card">
+            <h3>AI Performance Insights</h3>
+            <p>
+              Analyze academic trends and receive intelligent recommendations to
+              improve institution performance.
+            </p>
+            <button>View Analytics</button>
+          </div>
+
+          <div id="ad-2" class="advertisement-card">
+            <h3>Digital Notice Center</h3>
+            <p>
+              Publish announcements, exam schedules, circulars, and campus
+              updates instantly.
+            </p>
+            <button>Open Notices</button>
+          </div>
+
+          <div id="ad-3" class="advertisement-card">
+            <h3>Smart Timetable System</h3>
+            <p>
+              Create optimized class schedules and manage faculty timing
+              conflicts automatically.
+            </p>
+            <button>Manage Schedule</button>
+          </div>
+
+          <div id="ad-4" class="advertisement-card">
+            <h3>Parent Communication Hub</h3>
+            <p>
+              Keep parents informed with instant alerts, academic reports, and
+              attendance notifications.
+            </p>
+            <button>Connect Now</button>
+          </div>
+
+          <div id="ad-5" class="advertisement-card">
+            <h3>Examination Control Panel</h3>
+            <p>
+              Organize exams, publish results, and monitor academic evaluations
+              efficiently.
+            </p>
+            <button>Open Exams</button>
+          </div>
+
+          <div id="ad-6" class="advertisement-card">
+            <h3>Cloud Data Security</h3>
+            <p>
+              Protect institutional records with secure cloud backups and
+              advanced access control.
+            </p>
+            <button>Security Center</button>
+          </div>
+        </div>
+
+        <p class="dashboard-description">
+          Streamline your institution with real-time analytics, student
+          management, attendance tracking, and performance monitoring — all from
+          a single intelligent dashboard.
+        </p>
+      </section>
+
+      <section id="students" class="section">
         <h1>Scholar Hub</h1>
-        <p>Student management content here.</p>
-    </section>
-    
-    <section id="teachers" class="section">
+
+        <p>
+          Manage student academic records, attendance reports, classroom
+          activities, performance analytics, examination schedules, and learning
+          progress from one centralized dashboard system.
+        </p>
+
+        <p>
+          Monitor student study tracking, assignment submissions, internal
+          marks, subject-wise performance, and overall academic growth with
+          real-time institutional insights.
+        </p>
+
+        <p>
+          Access student timetables, fee records, exam notifications, digital
+          report cards, parent communication modules, and classroom management
+          tools designed for modern educational institutions.
+        </p>
+      </section>
+
+      <section id="teachers" class="section">
         <h1>Faculty Nexus</h1>
-        <p>Teachers section content here.</p>
-    </section>
-    
-    <section id="attendance" class="section">
+
+        <p>
+          Streamline faculty management with smart syllabus tracking, digital
+          lecture planning, automated scheduling, and real-time classroom
+          coordination tools.
+        </p>
+
+        <p>
+          Monitor faculty performance through institutional rating systems,
+          subject-wise teaching analytics, attendance reports, and academic
+          productivity insights for enhanced educational excellence.
+        </p>
+
+        <p>
+          Manage faculty applications, recruitment workflows, smart subject
+          allotment systems, timetable generation, department coordination, and
+          centralized staff records from a unified administration portal.
+        </p>
+      </section>
+
+      <section id="attendance" class="section">
         <h1>Presence Tracker</h1>
-        <p>Attendance tracking content here.</p>
-    </section>
-    
-    <section id="pricing" class="section">
+
+        <p>
+          Simplify institutional attendance management with real-time student
+          and faculty attendance tracking, automated reports, and centralized
+          monitoring systems.
+        </p>
+
+        <p>
+          Utilize smart advisory tools to maintain attendance consistency,
+          identify irregular patterns, generate performance insights, and
+          improve overall classroom engagement efficiency.
+        </p>
+
+        <p>
+          Access editable attendance records, timetable-based tracking, digital
+          leave management, subject-wise attendance analytics, and secure data
+          management for modern academic operations.
+        </p>
+      </section>
+
+      <section id="pricing" class="section">
         <h1>Premium Plans</h1>
-        <p>Pricing plans and details.</p>
-    </section>
-    
-    <section id="demo" class="section">
+        <p>
+          Choose scalable institutional plans designed for schools, academies,
+          and modern educational organizations with smart ERP management
+          features and centralized administration tools.
+        </p>
+
+        <div class="frame">
+          <div class="plan basic">
+            <h3 class="title">Starter</h3>
+
+            <div class="price">
+              $5
+              <span>per month</span>
+            </div>
+
+            <ul class="lines">
+              <li class="line">Student Management</li>
+              <li class="line">Basic Attendance Tracking</li>
+              <li class="line">Faculty Records</li>
+              <li class="line">Limited Dashboard Access</li>
+            </ul>
+          </div>
+
+          <div class="plan pro">
+            <h3 class="title">Professional</h3>
+
+            <div class="price">
+              $10
+              <span>per month</span>
+            </div>
+
+            <ul class="lines">
+              <li class="line">Advanced Analytics</li>
+              <li class="line">Smart Attendance System</li>
+              <li class="line">Timetable Automation</li>
+              <li class="line">Faculty Performance Tracking</li>
+            </ul>
+          </div>
+
+          <div class="plan premium">
+            <h3 class="title">Enterprise</h3>
+
+            <div class="price">
+              $20
+              <span>per month</span>
+            </div>
+
+            <ul class="lines">
+              <li class="line">AI Smart Management</li>
+              <li class="line">Complete ERP Integration</li>
+              <li class="line">Cloud Data Security</li>
+              <li class="line">24/7 Institutional Support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
         <h1>Experience Arena</h1>
         <p>Demo section content.</p>
-    </section>
+        <div class="demo-container">
+          <div class="demo-card">
+            <h3>Student Demo</h3>
 
-  </main>
+            <p>
+              Experience attendance tracking, timetable access, academic
+              reports, assignments, and performance analytics.
+            </p>
 
-  <footer>
-    
-  </footer>
-  <script src="script.js"></script>
+            <button>Open Demo</button>
+          </div>
 
-</body>
+          <div class="demo-card">
+            <h3>Teacher Demo</h3>
+
+            <p>
+              Manage syllabus progress, student records, attendance, subject
+              allocation, and classroom activities efficiently.
+            </p>
+
+            <button>Open Demo</button>
+          </div>
+
+          <div class="demo-card">
+            <h3>Admin Demo</h3>
+
+            <p>
+              Access centralized ERP controls including analytics, faculty
+              management, fee systems, and institutional reports.
+            </p>
+
+            <button>Open Demo</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>
