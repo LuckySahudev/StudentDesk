@@ -1,4 +1,134 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
 body{
-    background-color: red;
-    color: white;
+  height:100vh;
+  background:#f5f7fb;
+  overflow:hidden;
+}
+
+/* NAVBAR */
+
+.nav-bar{
+  height:75px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #818cf8);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 25px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.nav-bar .logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+}
+
+.logo-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background: white;
+  color:#6366f1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+}
+
+.nav-bar h1{
+  font-size:24px;
+  font-weight:600;
+  color: white;
+}
+
+.profile-img{
+  border:none;
+  background:none;
+  font-size:42px;
+  cursor:pointer;
+  color: rgb(33, 32, 80);
+}
+
+/* MAIN */
+
+main{
+  display:flex;
+  height:calc(100vh - 75px);
+}
+
+/* SIDEBAR */
+
+.side-bar{
+    height: 100%;
+    width: 220px;
+    background:#fff;
+    border-right:1px solid #ddd;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding: 0.8rem;
+}
+
+.side-bar .logo{
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-bar .logo button{
+  font-weight: 800;
+  height: 0.85rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.side-bar ul{
+    list-style:none;
+    padding:0;
+}
+
+.side-bar li{
+    margin:12px 0;
+}
+
+.side-bar button{
+    width: 180px;
+    border: none;
+    background: white;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+.side-bar button:hover{
+    background:#f3f4f6;
+}
+
+.sidebar-footer{
+    margin-top:30px;
+}
+
+
+.container{
+  flex: 1;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
 }
