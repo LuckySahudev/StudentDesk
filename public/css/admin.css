@@ -117,6 +117,14 @@ main{
     border-radius:8px;
 }
 
+.side-bar button.active {
+    background: #EEEDFE;
+    color: #534AB7;
+    font-weight: 500;
+}
+
+
+
 .side-bar button:hover{
     background:#f3f4f6;
 }
@@ -129,6 +137,782 @@ main{
 .container{
   flex: 1;
   height: 100%;
-  padding: 1rem;
+  width: 100%;
   overflow-y: auto;
+}
+
+
+
+
+/* admindashboard */
+.dashboard{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.great-panel{
+  width: 100%;
+  background: white;
+  padding: 1rem;
+}
+
+
+.detail-panel{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-card{
+  min-width: 200px;
+  display: flex;
+  flex-direction: column ;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  width: 24%;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.1);
+}
+
+.recent-admition-panel{
+  margin: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.event-panel , .notice-panel{
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.head{
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.1);
+}
+
+
+
+
+/* student nav */
+.Student{
+  width: 100%;
+  padding: 1rem;
+}
+
+.Student .page-header , 
+.Teacher .page-header ,
+.Attendance .page-header,
+.Classes .page-header,
+.Fees .page-header,
+.Exam .page-header,
+.Result .page-header,
+.Notice .page-header,
+.Timetable .page-header,
+.Settings .page-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Student .page-header p{
+  color: gray;
+}
+
+.add-student-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-student-btn:hover{
+  background: #3a3cb2;
+}
+
+.student-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  margin-bottom: .5rem;
+}
+
+.student-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.student-filters input,
+.student-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.student-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.student-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table th{
+  background: #f8f9fa;
+}
+
+.student-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+/* teacher nav css */
+.Teacher{
+  width: 100%;
+  padding: 1rem;
+}
+
+.teacher-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.teacher-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.teacher-filters input,
+.teacher-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.teacher-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.teacher-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teacher-table th,
+.teacher-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.teacher-table th{
+  background: #f8f9fa;
+}
+
+.teacher-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.add-teacher-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Attendence Panel */
+.Attendance{
+  padding: 1rem;
+  width: 100%;
+}
+
+.attendance-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-filters input,
+.attendance-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.attendance-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.attendance-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table th{
+  background: #f8f9fa;
+}
+
+.add-attendance-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-attendance-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  margin-bottom: .5rem;
+  color: #6b7280;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+/* class Html */
+
+.Classes{
+  width: 100%;
+  padding: 1rem;
+}
+
+.class-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.class-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.class-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.class-table th,
+.class-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.class-table th{
+  background: #f8f9fa;
+}
+
+.class-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.class-table button:hover{
+  color: #6366f1;
+}
+
+.add-class-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-class-btn:hover{
+  background: #4f46e5;
+}
+
+
+
+
+
+/* Fees */
+
+.Fees{
+  padding: 1rem;
+  width: 100%;
+}
+
+.fee-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fee-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.fee-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table th,
+.fee-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.fee-table th{
+  background: #f8f9fa;
+}
+
+.fee-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.add-fee-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-fee-btn:hover{
+  background: #4f46e5;
+}
+
+
+
+
+
+/* exam nav css */
+
+.Exam{
+  padding: 1rem;
+  width: 100%;
+}
+
+.exam-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exam-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.exam-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-table th,
+.exam-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.exam-table th{
+  background: #f8f9fa;
+}
+
+.exam-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.add-exam-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+ /* result nav css */
+
+.Result{
+  padding: 1rem;
+  width: 100%;
+}
+
+.result-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.result-filters select:focus{
+  border-color: #6366f1;
+}
+
+.view-result-btn,
+.add-result-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.view-result-btn:hover,
+.add-result-btn:hover{
+  background: #4f46e5;
+}
+
+.result-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.result-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.result-table th{
+  background: #f8f9fa;
+}
+
+.result-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.result-table button:hover{
+  color: #6366f1;
+}
+
+
+
+
+
+
+/* notice nav css */
+
+
+.Notice{
+  padding: 1rem;
+  width: 100%;
+}
+
+.notice-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.notice-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-table th,
+.notice-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.notice-table th{
+  background: #f8f9fa;
+}
+
+.notice-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.notice-table button:hover{
+  color: #6366f1;
+}
+
+.add-notice-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-notice-btn:hover{
+  background: #4f46e5;
+}
+
+
+
+/* timetable nav css */
+
+.Timetable{
+  padding: 1rem;
+  width: 100%;
+}
+
+.timetable-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timetable-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.timetable-filters select:focus{
+  border-color: #6366f1;
+}
+
+.timetable-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.timetable-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th,
+.timetable-table td{
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.timetable-table th{
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.timetable-table td{
+  text-align: center;
+}
+
+.add-timetable-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-timetable-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+
+
+/* setting nav css */
+.Settings{
+  padding: 1rem;
+  width: 100%;
+}
+
+.settings-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.settings-card h3{
+  margin-bottom: 1rem;
+}
+
+.setting-group{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.setting-group input,
+.setting-group select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.save-settings-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.save-settings-btn:hover{
+  background: #4f46e5;
 }
