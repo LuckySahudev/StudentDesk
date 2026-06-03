@@ -1,13 +1,1035 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/student.css">
-</head>
-<body>
-    <h1>student page</h1>
-    <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentDest</title>
+    <link rel="stylesheet" href="../public/css/student.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="ti ti-school"></i>
+        </div>
+        <h1>Student</h1>
+      </div>
+
+      <div class="left-access">
+        <button class="profile-img"><i class="bi bi-person-circle"></i></button>
+      </div>
+    </nav>
+
+    <main>
+      <aside class="side-bar">
+        <div class="logo">
+          <h4>View Panel</h4>
+          <button><i class="bi bi-three-dots"></i></button>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <button class="active">
+                <i class="ti ti-layout-dashboard"></i>
+                Dashboard
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-user"></i>
+                Profile
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-calendar-event"></i>
+                Attendance
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-currency-rupee"></i>
+                Fees
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-file-text"></i>
+                Exams
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-chart-bar"></i>
+                Results
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-clock"></i>
+                Timetable
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-speakerphone"></i>
+                Notices
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-book"></i>
+                Study Material
+              </button>
+            </li>
+
+            <li>
+              <button>
+                <i class="ti ti-settings"></i>
+                Settings
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#"><i class="ti ti-logout"></i> Logout</a>
+        </div>
+      </aside>
+
+      <section class="container">
+        <!-- <div class="dashboard">
+          <div class="great-panel">
+            <h3 class="mess">Welcome Back, Rahul 👋</h3>
+            <div class="date">Today is 01 June 2026</div>
+          </div>
+
+          <div class="detail-panel">
+            <div class="detail-card">
+              <h3>Attendance</h3>
+              <p>92%</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Current Class</h3>
+              <p>CSE 3rd Year</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>Fee Status</h3>
+              <p>Paid</p>
+            </div>
+
+            <div class="detail-card">
+              <h3>CGPA</h3>
+              <p>8.4</p>
+            </div>
+          </div>
+
+          <div class="notice-panel">
+            <div class="head">
+              <h4>Recent Notices</h4>
+              <i class="ti ti-chevron-up"></i>
+            </div>
+
+            <div class="content">
+              <p>📢 Mid Semester Exam starts from 10 June.</p>
+              <p>📢 Placement Drive registration is open.</p>
+              <p>📢 Annual Sports Event on 15 June.</p>
+            </div>
+          </div>
+
+          <div class="event-panel">
+            <div class="head">
+              <h4>Upcoming Events</h4>
+              <i class="ti ti-chevron-up"></i>
+            </div>
+
+            <div class="content">
+              <p>📅 Mid Semester Exam - 10 June</p>
+              <p>📅 Placement Drive - 15 June</p>
+              <p>📅 Sports Event - 20 June</p>
+            </div>
+          </div>
+
+          <div class="timetable-preview">
+            <div class="head">
+              <h4>Today's Classes</h4>
+              <i class="ti ti-chevron-up"></i>
+            </div>
+
+            <div class="content">
+              <p>09:00 - Mathematics</p>
+              <p>10:00 - Physics</p>
+              <p>11:30 - Computer Science</p>
+              <p>12:30 - English</p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- profile nav html -->
+        <!-- <div class="Profile">
+          <div class="page-header">
+            <div>
+              <h2>My Profile</h2>
+              <p>View and manage your personal information</p>
+            </div>
+
+            <button class="edit-profile-btn">
+              <i class="ti ti-edit"></i>
+              Edit Profile
+            </button>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-info">
+              <div class="profile-image">
+                <i class="bi bi-person-circle"></i>
+              </div>
+
+              <div class="profile-details">
+                <div class="detail-row">
+                  <strong>Name:</strong>
+                  <span>Rahul Sharma</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Roll Number:</strong>
+                  <span>2023CSE101</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Class:</strong>
+                  <span>CSE 3rd Year</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Section:</strong>
+                  <span>A</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Email:</strong>
+                  <span>rahul@gmail.com</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Phone:</strong>
+                  <span>9876543210</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Date of Birth:</strong>
+                  <span>12 March 2004</span>
+                </div>
+
+                <div class="detail-row">
+                  <strong>Address:</strong>
+                  <span>Bhopal, Madhya Pradesh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-card">
+            <h3>Academic Information</h3>
+
+            <div class="detail-row">
+              <strong>Course:</strong>
+              <span>B.Tech CSE</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>Semester:</strong>
+              <span>6th Semester</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>CGPA:</strong>
+              <span>8.4</span>
+            </div>
+
+            <div class="detail-row">
+              <strong>Attendance:</strong>
+              <span>92%</span>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Attandence Html -->
+        <!-- <div class="Attendance">
+          <div class="page-header">
+            <div>
+              <h2>Attendance</h2>
+              <p>Track your attendance records</p>
+            </div>
+          </div>
+
+          <div class="attendance-stats">
+            <div class="stat-card">
+              <h4>Attendance %</h4>
+              <h2>92%</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Present</h4>
+              <h2>110</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Absent</h4>
+              <h2>10</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Total Classes</h4>
+              <h2>120</h2>
+            </div>
+          </div>
+
+          <div class="attendance-filters">
+            <select>
+              <option selected disabled>Subject</option>
+              <option>Mathematics</option>
+              <option>Physics</option>
+              <option>Chemistry</option>
+              <option>Computer Science</option>
+              <option>English</option>
+            </select>
+
+            <input type="date" />
+
+            <input type="date" />
+
+            <select>
+              <option selected disabled>Month</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="attendance-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Faculty</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01 Jun 2026</td>
+                  <td>Mathematics</td>
+                  <td>Dr. Sharma</td>
+                  <td>Present</td>
+                </tr>
+
+                <tr>
+                  <td>02 Jun 2026</td>
+                  <td>Physics</td>
+                  <td>Prof. Verma</td>
+                  <td>Present</td>
+                </tr>
+
+                <tr>
+                  <td>03 Jun 2026</td>
+                  <td>Chemistry</td>
+                  <td>Dr. Patel</td>
+                  <td>Absent</td>
+                </tr>
+
+                <tr>
+                  <td>04 Jun 2026</td>
+                  <td>Computer Science</td>
+                  <td>Prof. Singh</td>
+                  <td>Present</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- Fees nav Html -->
+        <!-- <div class="Fees">
+          <div class="page-head">
+            <div>
+              <h2>Fees</h2>
+              <p>View fee details and payment history</p>
+            </div>
+          </div>
+
+          <div class="fee-stats">
+            <div class="stat-card">
+              <h4>Total Fees</h4>
+              <h2>₹50,000</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Paid</h4>
+              <h2>₹35,000</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Pending</h4>
+              <h2>₹15,000</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Due Date</h4>
+              <h2>15 Jun</h2>
+            </div>
+          </div>
+
+          <div class="fee-filters">
+            <select>
+              <option selected disabled>Select Session</option>
+              <option>2025-26</option>
+              <option>2026-27</option>
+            </select>
+
+            <select>
+              <option selected disabled>Fee Type</option>
+              <option>Tuition Fee</option>
+              <option>Transport Fee</option>
+              <option>Exam Fee</option>
+              <option>Library Fee</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="fee-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Receipt No</th>
+                  <th>Date</th>
+                  <th>Fee Type</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>R001</td>
+                  <td>10 Apr 2026</td>
+                  <td>Tuition Fee</td>
+                  <td>₹15,000</td>
+                  <td>Paid</td>
+                </tr>
+
+                <tr>
+                  <td>R002</td>
+                  <td>10 Jul 2026</td>
+                  <td>Transport Fee</td>
+                  <td>₹5,000</td>
+                  <td>Paid</td>
+                </tr>
+
+                <tr>
+                  <td>R003</td>
+                  <td>Pending</td>
+                  <td>Tuition Fee</td>
+                  <td>₹15,000</td>
+                  <td>Pending</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- Exam nav Html -->
+        <!-- <div class="Exam">
+          <div class="page-head">
+            <div>
+              <h2>Examinations</h2>
+              <p>View exam schedules and details</p>
+            </div>
+          </div>
+
+          <div class="exam-stats">
+            <div class="stat-card">
+              <h4>Total Exams</h4>
+              <h2>5</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Upcoming</h4>
+              <h2>2</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Completed</h4>
+              <h2>3</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Next Exam</h4>
+              <h2>15 Jun</h2>
+            </div>
+          </div>
+
+          <div class="exam-filters">
+            <select>
+              <option selected disabled>Select Exam</option>
+              <option>Unit Test 1</option>
+              <option>Unit Test 2</option>
+              <option>Quarterly Exam</option>
+              <option>Half Yearly Exam</option>
+              <option>Pre Board</option>
+              <option>Annual Exam</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="exam-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Time</th>
+                  <th>Room</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>15 Jun 2026</td>
+                  <td>Mathematics</td>
+                  <td>09:00 AM</td>
+                  <td>Room 101</td>
+                  <td>Upcoming</td>
+                </tr>
+
+                <tr>
+                  <td>17 Jun 2026</td>
+                  <td>Science</td>
+                  <td>09:00 AM</td>
+                  <td>Room 101</td>
+                  <td>Upcoming</td>
+                </tr>
+
+                <tr>
+                  <td>10 Mar 2026</td>
+                  <td>English</td>
+                  <td>09:00 AM</td>
+                  <td>Room 102</td>
+                  <td>Completed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- result nav html  -->
+        <!-- <div class="Result">
+          <div class="page-head">
+            <div>
+              <h2>Results</h2>
+              <p>View your academic performance</p>
+            </div>
+          </div>
+
+          <div class="result-stats">
+            <div class="stat-card">
+              <h4>Overall Percentage</h4>
+              <h2>88%</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Grade</h4>
+              <h2>A</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Rank</h4>
+              <h2>12</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Exams Taken</h4>
+              <h2>5</h2>
+            </div>
+          </div>
+
+          <div class="result-filters">
+            <select>
+              <option selected disabled>Select Exam</option>
+              <option>Unit Test 1</option>
+              <option>Unit Test 2</option>
+              <option>Quarterly Exam</option>
+              <option>Half Yearly Exam</option>
+              <option>Pre Board</option>
+              <option>Annual Exam</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View Result
+            </button>
+          </div>
+
+          <div class="result-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Marks Obtained</th>
+                  <th>Total Marks</th>
+                  <th>Percentage</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Mathematics</td>
+                  <td>88</td>
+                  <td>100</td>
+                  <td>88%</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <td>Science</td>
+                  <td>91</td>
+                  <td>100</td>
+                  <td>91%</td>
+                  <td>A+</td>
+                </tr>
+
+                <tr>
+                  <td>English</td>
+                  <td>82</td>
+                  <td>100</td>
+                  <td>82%</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <td>Social Science</td>
+                  <td>85</td>
+                  <td>100</td>
+                  <td>85%</td>
+                  <td>A</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- Time table nav html  -->
+        <!-- <div class="Timetable">
+          <div class="page-head">
+            <div>
+              <h2>Timetable</h2>
+              <p>View your class schedule</p>
+            </div>
+          </div>
+
+          <div class="timetable-filters">
+            <select>
+              <option selected disabled>Select Day</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="timetable-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Period</th>
+                  <th>Time</th>
+                  <th>Subject</th>
+                  <th>Teacher</th>
+                  <th>Room</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>08:00 - 08:45</td>
+                  <td>Mathematics</td>
+                  <td>Mr. Sharma</td>
+                  <td>101</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>08:45 - 09:30</td>
+                  <td>Science</td>
+                  <td>Mrs. Gupta</td>
+                  <td>101</td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>09:30 - 10:15</td>
+                  <td>English</td>
+                  <td>Mr. Singh</td>
+                  <td>101</td>
+                </tr>
+
+                <tr>
+                  <td>Break</td>
+                  <td>10:15 - 10:30</td>
+                  <td colspan="3">Short Break</td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>10:30 - 11:15</td>
+                  <td>Social Science</td>
+                  <td>Mrs. Patel</td>
+                  <td>101</td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>11:15 - 12:00</td>
+                  <td>Computer</td>
+                  <td>Mr. Verma</td>
+                  <td>Lab-1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>  -->
+
+        <!-- Notice nav html  -->
+        <!-- <div class="Notice">
+          <div class="page-head">
+            <div>
+              <h2>Notices</h2>
+              <p>View latest school announcements and updates</p>
+            </div>
+          </div>
+
+          <div class="notice-stats">
+            <div class="stat-card">
+              <h4>Total Notices</h4>
+              <h2>15</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Unread</h4>
+              <h2>3</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>This Month</h4>
+              <h2>8</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Important</h4>
+              <h2>2</h2>
+            </div>
+          </div>
+
+          <div class="notice-filters">
+            <select>
+              <option selected disabled>Category</option>
+              <option>Academic</option>
+              <option>Examination</option>
+              <option>Sports</option>
+              <option>Events</option>
+              <option>Holiday</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="notice-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01 Jun 2026</td>
+                  <td>Quarterly Examination Schedule Released</td>
+                  <td>Examination</td>
+                  <td>High</td>
+                </tr>
+
+                <tr>
+                  <td>05 Jun 2026</td>
+                  <td>Summer Vacation Announcement</td>
+                  <td>Holiday</td>
+                  <td>Medium</td>
+                </tr>
+
+                <tr>
+                  <td>10 Jun 2026</td>
+                  <td>Annual Sports Meet Registration</td>
+                  <td>Sports</td>
+                  <td>Low</td>
+                </tr>
+
+                <tr>
+                  <td>12 Jun 2026</td>
+                  <td>Science Exhibition Participation Form</td>
+                  <td>Events</td>
+                  <td>Medium</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- study material html -->
+        <!-- <div class="StudyMaterial">
+          <div class="page-head">
+            <div>
+              <h2>Study Material</h2>
+              <p>Access notes, assignments, and learning resources</p>
+            </div>
+          </div>
+
+          <div class="material-stats">
+            <div class="stat-card">
+              <h4>Total Materials</h4>
+              <h2>45</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Assignments</h4>
+              <h2>12</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Notes</h4>
+              <h2>25</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Books</h4>
+              <h2>8</h2>
+            </div>
+          </div>
+
+          <div class="material-filters">
+            <select>
+              <option selected disabled>Subject</option>
+              <option>Mathematics</option>
+              <option>Science</option>
+              <option>English</option>
+              <option>Social Science</option>
+              <option>Computer</option>
+            </select>
+
+            <select>
+              <option selected disabled>Material Type</option>
+              <option>Notes</option>
+              <option>Assignment</option>
+              <option>Book</option>
+              <option>Worksheet</option>
+            </select>
+
+            <button class="view-btn">
+              <i class="ti ti-search"></i>
+              View
+            </button>
+          </div>
+
+          <div class="material-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Title</th>
+                  <th>Type</th>
+                  <th>Upload Date</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Mathematics</td>
+                  <td>Algebra Notes</td>
+                  <td>Notes</td>
+                  <td>01 Jun 2026</td>
+                  <td>
+                    <button><i class="ti ti-download"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Science</td>
+                  <td>Chapter 5 Assignment</td>
+                  <td>Assignment</td>
+                  <td>03 Jun 2026</td>
+                  <td>
+                    <button><i class="ti ti-download"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>English</td>
+                  <td>Grammar Workbook</td>
+                  <td>Book</td>
+                  <td>05 Jun 2026</td>
+                  <td>
+                    <button><i class="ti ti-download"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> -->
+
+        <!-- setting nav html -->
+        <div class="Settings">
+          <div class="page-head">
+            <div>
+              <h2>Settings</h2>
+              <p>Manage your account settings</p>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Profile Settings</h3>
+
+            <div class="setting-group">
+              <label>Full Name</label>
+              <input type="text" value="Rahul Sharma" />
+            </div>
+
+            <div class="setting-group">
+              <label>Email</label>
+              <input type="email" value="rahul@gmail.com" />
+            </div>
+
+            <div class="setting-group">
+              <label>Phone Number</label>
+              <input type="text" value="9876543210" />
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Change Password</h3>
+
+            <div class="setting-group">
+              <label>Current Password</label>
+              <input type="password" />
+            </div>
+
+            <div class="setting-group">
+              <label>New Password</label>
+              <input type="password" />
+            </div>
+
+            <div class="setting-group">
+              <label>Confirm Password</label>
+              <input type="password" />
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Notifications</h3>
+
+            <div class="setting-check">
+              <input type="checkbox" checked />
+              <label>Exam Notifications</label>
+            </div>
+
+            <div class="setting-check">
+              <input type="checkbox" checked />
+              <label>Fee Reminders</label>
+            </div>
+
+            <div class="setting-check">
+              <input type="checkbox" />
+              <label>Event Notifications</label>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Appearance</h3>
+
+            <div class="setting-group">
+              <label>Theme</label>
+
+              <select>
+                <option>Light</option>
+                <option>Dark</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="save-btn">
+            <i class="ti ti-device-floppy"></i>
+            Save Changes
+          </button>
+        </div>
+        
+      </section>
+    </main>
+  </body>
 </html>
