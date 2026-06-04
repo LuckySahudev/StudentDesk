@@ -140,3 +140,1085 @@ main{
   width: 100%;
   overflow-y: auto;
 }
+
+
+
+/* dashBoard nav css */
+.dashboard{
+	padding: 1rem;
+  width: 100%;
+}
+
+.great-panel{
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.mess{
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.date{
+  color: #6b7280;
+}
+
+.detail-panel{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.detail-card h3{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.detail-card p{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dashboard-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-panel,
+.event-panel{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.head{
+  margin-bottom: 1rem;
+}
+
+.content p{
+  padding: .75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.content p:last-child{
+  border-bottom: none;
+}
+
+.attendance-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.attendance-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.attendance-table tr:hover{
+  background: #f9fafb;
+}
+
+
+
+/* profile nav css */
+.Profile{
+	padding: 1rem;
+  width: 100%;
+}
+
+.Profile .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.profile-card{
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.profile-header{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-header .profile-img{
+  font-size: 5rem;
+  color: #6366f1;
+}
+
+.profile-info h3{
+  margin-bottom: .25rem;
+}
+
+.profile-info p{
+  color: #6b7280;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.detail-row{
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child{
+  border-bottom: none;
+}
+
+.detail-row strong{
+  color: #374151;
+}
+
+.detail-row span{
+  color: #6b7280;
+}
+
+.edit-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn:hover{
+  background: #4f46e5;
+}
+
+
+/* Myclasse nav css */
+.MyClasses{
+	padding: 1rem;
+  width: 100%;
+}
+
+.MyClasses .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.class-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.class-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.class-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.class-filters select:focus{
+  border-color: #6366f1;
+}
+
+.class-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.class-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.class-table th,
+.class-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.class-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.class-table tr:hover{
+  background: #f9fafb;
+}
+
+.class-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.class-table button:hover{
+  color: #6366f1;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+
+/* student nav css */
+.Students{
+	padding: 1rem;
+  width: 100%;
+}
+
+.Students .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.student-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.student-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.student-filters input,
+.student-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.student-filters input{
+  flex: 1;
+}
+
+.student-filters input:focus,
+.student-filters select:focus{
+  border-color: #6366f1;
+}
+
+.student-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.student-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.student-table tr:hover{
+  background: #f9fafb;
+}
+
+.student-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.student-table button:hover{
+  color: #6366f1;
+}
+
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+/* Attandence nav css */
+.Attendance{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Attendance .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.attendance-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-filters select,
+.attendance-filters input{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.attendance-filters select:focus,
+.attendance-filters input:focus{
+  border-color: #6366f1;
+}
+
+.attendance-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.attendance-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.attendance-table tr:hover{
+  background: #f9fafb;
+}
+
+.attendance-table select{
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.mark-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.mark-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+
+
+/* exam nav css */
+.Exam{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Exam .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.exam-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exam-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exam-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.exam-filters select:focus{
+  border-color: #6366f1;
+}
+
+.exam-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.exam-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-table th,
+.exam-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.exam-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.exam-table tr:hover{
+  background: #f9fafb;
+}
+
+.exam-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.exam-table button:hover{
+  color: #6366f1;
+}
+
+.add-exam-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-exam-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+
+
+/* result nav css */
+.Result{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Result .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.result-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.result-filters select:focus{
+  border-color: #6366f1;
+}
+
+.result-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.result-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.result-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.result-table tr:hover{
+  background: #f9fafb;
+}
+
+.result-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.result-table button:hover{
+  color: #6366f1;
+}
+
+.publish-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.publish-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+/* studyMaterial nav css */
+.StudyMaterial{
+  padding: 1rem;
+  width: 100%;
+}
+
+.StudyMaterial .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.material-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.material-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.material-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.material-filters select:focus{
+  border-color: #6366f1;
+}
+
+.material-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.material-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.material-table th,
+.material-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.material-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.material-table tr:hover{
+  background: #f9fafb;
+}
+
+.material-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.material-table button:hover{
+  color: #6366f1;
+}
+
+.upload-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+.stat-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.stat-card h4{
+  color: #6b7280;
+  margin-bottom: .5rem;
+}
+
+.stat-card h2{
+  color: #111827;
+}
+
+
+/* timetable nav css */
+.Timetable{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Timetable .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.timetable-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timetable-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timetable-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.timetable-filters select:focus{
+  border-color: #6366f1;
+}
+
+.timetable-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.timetable-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th,
+.timetable-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.timetable-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.timetable-table tr:hover{
+  background: #f9fafb;
+}
+
+.edit-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+
+/* notice nav css  */
+.Notice{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Notice .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.notice-stats{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-filters{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-filters select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.notice-table{
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.notice-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-table th,
+.notice-table td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.notice-table th{
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.notice-table tr:hover{
+  background: #f9fafb;
+}
+
+.notice-table button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.notice-table button:hover{
+  color: #6366f1;
+}
+
+.add-notice-btn,
+.view-btn{
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-notice-btn:hover,
+.view-btn:hover{
+  background: #4f46e5;
+}
+
+
+/* setting nav css */
+.Settings{
+  padding: 1rem;
+  width: 100%;
+}
+
+.Settings .page-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.settings-card{
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.settings-card h3{
+  margin-bottom: 1rem;
+}
+
+.setting-group{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.setting-group label{
+  font-weight: 500;
+}
+
+.setting-group input,
+.setting-group select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.setting-group input:focus,
+.setting-group select:focus{
+  border-color: #6366f1;
+}
+
+.setting-check{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+
+.save-btn{
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.save-btn:hover{
+  background: #4f46e5;
+}
