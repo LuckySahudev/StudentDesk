@@ -1,8 +1,15 @@
 const path = require('path');
 const fs = require('fs');
-const pageURL = path.resolve(__dirname,'../../pages/admin.html')
-const page = fs.readFileSync(pageURL,"utf-8");
 
-exports.getpage = (req,res)=>{
-    res.send(page);
-}
+const pages = new Set([
+  'dashboard', 'students', 'teachers', 'attendance', 'classes', 'fees',
+  'exams', 'results', 'notices', 'timetable', 'analytics', 'settings',
+]);
+
+exports.getpage = (req, res) => {
+  const page = req.params.page || 'dashboard';
+  if (!pages.has(page)) return res.sendStatus(404);
+
+  const pagePath = path.resolve(__dirname, '../pages/admin', `${page}.html`);
+  res.type('html').send(fs.readFileSync(pagePath, 'utf8'));
+};

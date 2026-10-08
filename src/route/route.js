@@ -6,9 +6,17 @@ const studentController = require(path.resolve(__dirname,'../controller/studentC
 const teacherController = require(path.resolve(__dirname,'../controller/teacherController'));
 
 router.
-    get('/admin/',adminController.getpage)
-    .get('/student/',studentController.getpage)
-    .get('/teacher/',teacherController.getpage);
+    get('/login', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/login.html')))
+    .get('/login/', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/login.html')))
+    .get('/admin', adminController.getpage)
+    .get('/admin/', adminController.getpage)
+    .get('/admin/:page', adminController.getpage)
+    .get('/student', studentController.getpage)
+    .get('/student/', studentController.getpage)
+    .get('/student/:page', studentController.getpage)
+    .get('/teacher', teacherController.getpage)
+    .get('/teacher/', teacherController.getpage)
+    .get('/teacher/:page', teacherController.getpage);
 
 
 

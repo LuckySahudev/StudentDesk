@@ -2,26 +2,57 @@ const cards = document.querySelectorAll(".advertisement-card");
 const toggle = document.querySelector('.icon-btn');
 const navLinkBtn = document.querySelectorAll('.link-btn');
 
+document.querySelector('.login-btn')?.addEventListener('click', () => {
+    window.location.href = '/login/';
+});
+
+function updateHeaderOnScroll() {
+    document.querySelector('.nav-bar')?.classList.toggle('scrolled', window.scrollY > 24);
+}
+
+window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+updateHeaderOnScroll();
+
 // Active nav link
 document.addEventListener("click", (e) => {
-    const target = e.target;
-    const btn = target.classList.contains("link-btn") ? target : target.parentElement;
+    const btn = e.target.closest(".link-btn");
+    if (!btn) return;
 
-    if (btn && btn.classList.contains("link-btn")) {
-        navLinkBtn.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-    }
+    const section = document.getElementById(btn.dataset.section);
+    if (!section) return;
+
+    navLinkBtn.forEach(link => link.classList.remove("active"));
+    btn.classList.add("active");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 
 
 // Theme toggle
-toggle.addEventListener('click', () => {
-    const icon = toggle.querySelector('i');
-    let flag = icon.classList.contains('ti-sun');
+const themeKey = 'studentdesk-landing-theme';
+const savedTheme = localStorage.getItem(themeKey);
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (flag) icon.classList.replace('ti-sun', 'ti-moon');
-    else icon.classList.replace('ti-moon', 'ti-sun');
+function setTheme(theme) {
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+
+    const icon = toggle?.querySelector('i');
+    if (icon) {
+        icon.classList.toggle('ti-sun', !isDark);
+        icon.classList.toggle('ti-moon', isDark);
+    }
+
+    toggle?.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle?.setAttribute('aria-pressed', String(isDark));
+}
+
+setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+toggle?.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    localStorage.setItem(themeKey, nextTheme);
+    setTheme(nextTheme);
 });
 
 
@@ -58,6 +89,6 @@ updateCarousel();
 setInterval(() => {
     current = (current + 1) % cards.length;
     updateCarousel();
-}, 2000);
+}, 2500);
 
     

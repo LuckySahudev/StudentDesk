@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentDesk | Teacher Settings</title>
+    <link rel="stylesheet" href="/css/teacher.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <div class="logo-icon"><i class="ti ti-school"></i></div>
+          <h1>Teacher</h1>
+        </div>
+        <div class="left-access"><button class="profile-img" aria-label="Profile"><i class="bi bi-person-circle"></i></button></div>
+      </nav>
+    </header>
+    <main>
+      <aside class="side-bar">
+        <div class="logo"><h4>Teacher Panel</h4></div>
+        <nav aria-label="Teacher pages"><ul>
+            <li><a class="page-link" href="/teacher/dashboard"><i class="ti ti-layout-dashboard"></i>Dashboard</a></li>
+            <li><a class="page-link" href="/teacher/profile"><i class="ti ti-user"></i>Profile</a></li>
+            <li><a class="page-link" href="/teacher/my-classes"><i class="ti ti-school"></i>My Classes</a></li>
+            <li><a class="page-link" href="/teacher/students"><i class="ti ti-users"></i>Students</a></li>
+            <li><a class="page-link" href="/teacher/attendance"><i class="ti ti-calendar-event"></i>Attendance</a></li>
+            <li><a class="page-link" href="/teacher/exams"><i class="ti ti-file-text"></i>Exams</a></li>
+            <li><a class="page-link" href="/teacher/results"><i class="ti ti-chart-bar"></i>Results</a></li>
+            <li><a class="page-link" href="/teacher/study-material"><i class="ti ti-book"></i>Study Material</a></li>
+            <li><a class="page-link" href="/teacher/timetable"><i class="ti ti-clock"></i>Timetable</a></li>
+            <li><a class="page-link" href="/teacher/notices"><i class="ti ti-speakerphone"></i>Notices</a></li>
+            <li><a class="page-link active" aria-current="page" href="/teacher/settings"><i class="ti ti-settings"></i>Settings</a></li>
+        </ul></nav>
+        <div class="sidebar-footer"><a href="/"><i class="ti ti-logout"></i> Logout</a></div>
+      </aside>
+      <section class="container" aria-label="Settings">
+        <div class="Settings">
+          <div class="page-head">
+            <div>
+              <h2>Settings</h2>
+              <p>Manage your account and preferences</p>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Profile Information</h3>
+
+            <div class="setting-group">
+              <label>Full Name</label>
+              <input type="text" value="Rajesh Sharma" />
+            </div>
+
+            <div class="setting-group">
+              <label>Email</label>
+              <input type="email" value="rajesh@school.com" />
+            </div>
+
+            <div class="setting-group">
+              <label>Phone Number</label>
+              <input type="text" value="9876543210" />
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Change Password</h3>
+
+            <div class="setting-group">
+              <label>Current Password</label>
+              <input type="password" />
+            </div>
+
+            <div class="setting-group">
+              <label>New Password</label>
+              <input type="password" />
+            </div>
+
+            <div class="setting-group">
+              <label>Confirm Password</label>
+              <input type="password" />
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Notification Preferences</h3>
+
+            <div class="setting-check">
+              <input type="checkbox" checked />
+              <label>Exam Notifications</label>
+            </div>
+
+            <div class="setting-check">
+              <input type="checkbox" checked />
+              <label>Attendance Alerts</label>
+            </div>
+
+            <div class="setting-check">
+              <input type="checkbox" checked />
+              <label>Notice Updates</label>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Appearance</h3>
+
+            <div class="setting-group">
+              <label>Theme</label>
+
+              <select>
+                <option>Light</option>
+                <option>Dark</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="save-btn">
+            <i class="ti ti-device-floppy"></i>
+            Save Changes
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

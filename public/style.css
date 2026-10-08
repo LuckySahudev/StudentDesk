@@ -11,18 +11,56 @@ body {
 }
 
 .nav-bar {
-  margin: 1rem;
-  position: sticky;
-  top: 1rem;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
+  border: 0;
+  border-radius: 0;
   padding: 0 1.25rem;
-  height: 58px;
+  height: 64px;
   z-index: 5;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  isolation: isolate;
+}
+
+.nav-bar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-bar::before {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  inset: 0;
+  border-radius: 0;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.nav-bar.scrolled {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.1);
+}
+
+main {
+  padding-top: 64px;
+}
+
+.nav-bar.scrolled::before {
+  background: rgba(255, 255, 255, 0.68);
+  opacity: 1;
 }
 
 /* ── Logo ── */
@@ -154,6 +192,7 @@ body {
   min-height: 200px;
   margin-top: 30px;
   margin-bottom: 30px;
+  scroll-margin-top: 100px;
 }
 
 
@@ -218,7 +257,7 @@ body {
   border-radius: 16px;
   border-left: 5px solid #3C3489;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.8s ease;
+  transition: all 1.4s ease-in-out;
   opacity: 0;
   transform: scale(0.8);
 }
@@ -521,4 +560,98 @@ footer{
     text-align: center;
     color: #888;
     font-size: 14px;
+}
+
+/* Landing page dark theme */
+body {
+  color: #111827;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.dark-mode .nav-bar {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .nav-bar.scrolled {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+.dark-mode .nav-bar.scrolled::before {
+  background: rgba(31, 41, 55, 0.72);
+}
+
+.dark-mode .logo h1,
+.dark-mode .section h1,
+.dark-mode .advertisement-card h3,
+.dark-mode .plan .title {
+  color: #f9fafb;
+}
+
+.dark-mode .nav-links li button {
+  color: #cbd5e1;
+}
+
+.dark-mode .nav-links li button:hover,
+.dark-mode .icon-btn:hover {
+  background: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .nav-links li button.active {
+  background: #37306f;
+  color: #c4b5fd;
+}
+
+.dark-mode .icon-btn,
+.dark-mode .divider {
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.dark-mode .advertisement-card,
+.dark-mode .plan {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+.dark-mode .advertisement-card p,
+.dark-mode #students p,
+.dark-mode #teachers p,
+.dark-mode #attendance p,
+.dark-mode #pricing p,
+.dark-mode .demo-card p,
+.dark-mode .plan .price span {
+  color: #cbd5e1;
+}
+
+.dark-mode .dashboard-description {
+  color: #c4b5fd;
+}
+
+.dark-mode .plan .price,
+.dark-mode .pro .price {
+  color: #a5b4fc;
+}
+
+.dark-mode .pro {
+  border-color: rgba(129, 140, 248, 0.55);
+}
+
+.dark-mode .demo-card {
+  border-color: #374151;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }

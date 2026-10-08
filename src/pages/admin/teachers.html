@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentDesk | Admin Teachers</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <div class="logo-icon"><i class="ti ti-school"></i></div>
+          <h1>Admin</h1>
+        </div>
+        <div class="left-access"><button class="profile-img" aria-label="Profile"><i class="bi bi-person-circle"></i></button></div>
+      </nav>
+    </header>
+    <main>
+      <aside class="side-bar">
+        <div class="logo"><h4>Control Panel</h4></div>
+        <nav aria-label="Admin pages"><ul>
+            <li><a class="page-link" href="/admin/dashboard"><i class="ti ti-layout-dashboard"></i>Dashboard</a></li>
+            <li><a class="page-link" href="/admin/students"><i class="ti ti-users"></i>Students</a></li>
+            <li><a class="page-link active" aria-current="page" href="/admin/teachers"><i class="ti ti-school"></i>Teachers</a></li>
+            <li><a class="page-link" href="/admin/attendance"><i class="ti ti-calendar-event"></i>Attendance</a></li>
+            <li><a class="page-link" href="/admin/classes"><i class="ti ti-book"></i>Class</a></li>
+            <li><a class="page-link" href="/admin/fees"><i class="ti ti-currency-rupee"></i>Fees</a></li>
+            <li><a class="page-link" href="/admin/exams"><i class="ti ti-file-text"></i>Exams</a></li>
+            <li><a class="page-link" href="/admin/results"><i class="ti ti-chart-bar"></i>Results</a></li>
+            <li><a class="page-link" href="/admin/notices"><i class="ti ti-speakerphone"></i>Notices</a></li>
+            <li><a class="page-link" href="/admin/timetable"><i class="ti ti-clock"></i>Timetable</a></li>
+            <li><a class="page-link" href="/admin/analytics"><i class="ti ti-chart-line"></i>Analytics</a></li>
+            <li><a class="page-link" href="/admin/settings"><i class="ti ti-settings"></i>Settings</a></li>
+        </ul></nav>
+        <div class="sidebar-footer"><a href="/"><i class="ti ti-logout"></i> Logout</a></div>
+      </aside>
+      <section class="container" aria-label="Teachers">
+        <div class="Teacher">
+          <div class="page-header">
+            <div>
+              <h2>Teachers Management</h2>
+              <p>Manage all teacher records</p>
+            </div>
+
+            <button class="add-teacher-btn">
+              <i class="ti ti-plus"></i>
+              Add Teacher
+            </button>
+          </div>
+
+          <div class="teacher-stats">
+            <div class="stat-card">
+              <h4>Total Teachers</h4>
+              <h2>130</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Active Teachers</h4>
+              <h2>125</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>On Leave</h4>
+              <h2>5</h2>
+            </div>
+
+            <div class="stat-card">
+              <h4>Departments</h4>
+              <h2>12</h2>
+            </div>
+          </div>
+
+          <div class="teacher-filters">
+            <input type="text" placeholder="Search teacher..." />
+
+            <select>
+              <option>All Departments</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>ECE</option>
+              <option>EE</option>
+              <option>ME</option>
+            </select>
+          </div>
+
+          <div class="teacher-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Department</th>
+                  <th>Qualification</th>
+                  <th>Contact</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>T101</td>
+                  <td>Dr. Amit Sharma</td>
+                  <td>CSE</td>
+                  <td>Ph.D</td>
+                  <td>9876543210</td>
+                  <td>Active</td>
+                  <td>
+                    <button><i class="ti ti-eye"></i></button>
+                    <button><i class="ti ti-edit"></i></button>
+                    <button><i class="ti ti-trash"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>T102</td>
+                  <td>Priya Verma</td>
+                  <td>ECE</td>
+                  <td>M.Tech</td>
+                  <td>9876543211</td>
+                  <td>Active</td>
+                  <td>
+                    <button><i class="ti ti-eye"></i></button>
+                    <button><i class="ti ti-edit"></i></button>
+                    <button><i class="ti ti-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
