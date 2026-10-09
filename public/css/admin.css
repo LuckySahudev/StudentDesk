@@ -176,6 +176,80 @@ main{
 
 }
 
+.dashboard-shortcuts{
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-shortcuts h3{
+  margin-bottom: .8rem;
+  color: #1f2937;
+}
+
+.dashboard-link-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .65rem;
+}
+
+.dashboard-link{
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .7rem .85rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background: #f9fafb;
+  color: #374151;
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color .18s ease, border-color .18s ease,
+    color .18s ease, transform .18s ease;
+}
+
+.dashboard-link:hover,
+.dashboard-link:focus-visible{
+  background: #eeedfe;
+  border-color: #c7c4f3;
+  color: #534ab7;
+  transform: translateY(-2px);
+}
+
+.dashboard-link:focus-visible{
+  outline: 3px solid rgba(83, 74, 183, .25);
+  outline-offset: 2px;
+}
+
+.back-to-dashboard{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1rem 1rem 0;
+  padding: .65rem .9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #534ab7;
+  background: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-to-dashboard:hover,
+.back-to-dashboard:focus-visible{
+  background: #eeedfe;
+  border-color: #c7c4f3;
+}
+
+.page-header .back-to-dashboard{
+  margin: 0;
+  flex: 0 0 auto;
+}
+
 .great-panel{
   width: 100%;
   background: white;
@@ -938,4 +1012,198 @@ main{
 
 .save-settings-btn:hover{
   background: #4f46e5;
+}
+
+/* Keep admin content inside its viewport and panels. */
+.container{
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+}
+
+.dashboard-shortcuts{
+  display: block;
+}
+
+.dashboard .detail-panel{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0;
+  min-width: 0;
+}
+
+.dashboard .detail-card{
+  width: auto;
+  min-width: 0;
+}
+
+.recent-admition-panel{
+  min-width: 0;
+  margin: 0 0 .8rem;
+}
+
+.Student .page-header,
+.Teacher .page-header,
+.Attendance .page-header,
+.Classes .page-header,
+.Fees .page-header,
+.Exam .page-header,
+.Result .page-header,
+.Notice .page-header,
+.Timetable .page-header,
+.Settings .page-header{
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+}
+
+.Student .page-header > div:first-child,
+.Teacher .page-header > div:first-child,
+.Attendance .page-header > div:first-child,
+.Classes .page-header > div:first-child,
+.Fees .page-header > div:first-child,
+.Exam .page-header > div:first-child,
+.Result .page-header > div:first-child,
+.Notice .page-header > div:first-child,
+.Timetable .page-header > div:first-child,
+.Settings .page-header > div:first-child{
+  min-width: 0;
+}
+
+.student-filters,
+.teacher-filters,
+.attendance-filters,
+.result-filters,
+.timetable-filters{
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.student-filters input,
+.student-filters select,
+.teacher-filters input,
+.teacher-filters select,
+.attendance-filters input,
+.attendance-filters select,
+.result-filters select,
+.timetable-filters select{
+  min-width: 0;
+  flex: 1 1 170px;
+}
+
+.student-table,
+.teacher-table,
+.attendance-table,
+.class-table,
+.fee-table,
+.exam-table,
+.result-table,
+.notice-table,
+.timetable-table{
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.student-table table,
+.teacher-table table,
+.attendance-table table,
+.class-table table,
+.fee-table table,
+.exam-table table,
+.result-table table,
+.notice-table table,
+.timetable-table table{
+  min-width: 680px;
+}
+
+.Student,
+.Teacher,
+.Attendance,
+.Classes,
+.Fees,
+.Exam,
+.Result,
+.Notice,
+.Timetable,
+.Settings,
+.dashboard{
+  min-width: 0;
+}
+
+@media (max-width: 1050px){
+  .student-stats,
+  .teacher-stats,
+  .attendance-stats,
+  .class-stats,
+  .fee-stats,
+  .exam-stats,
+  .result-stats,
+  .notice-stats,
+  .dashboard .detail-panel{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px){
+  body{
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .nav-bar{
+    min-height: 75px;
+    height: auto;
+    padding: .75rem 1rem;
+    gap: .75rem;
+  }
+
+  .nav-bar h1{
+    font-size: 1.2rem;
+  }
+
+  main{
+    display: block;
+    height: auto;
+    min-height: calc(100vh - 75px);
+  }
+
+  .container{
+    height: auto;
+    min-height: calc(100vh - 75px);
+    overflow: visible;
+  }
+
+  .Student,
+  .Teacher,
+  .Attendance,
+  .Classes,
+  .Fees,
+  .Exam,
+  .Result,
+  .Notice,
+  .Timetable,
+  .Settings{
+    padding: .75rem;
+  }
+
+  .student-stats,
+  .teacher-stats,
+  .attendance-stats,
+  .class-stats,
+  .fee-stats,
+  .exam-stats,
+  .result-stats,
+  .notice-stats,
+  .dashboard .detail-panel{
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .head{
+    width: 100%;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
 }

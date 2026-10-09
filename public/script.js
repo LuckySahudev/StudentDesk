@@ -29,7 +29,7 @@ document.addEventListener("click", (e) => {
 
 
 // Theme toggle
-const themeKey = 'studentdesk-landing-theme';
+const themeKey = 'studentdesk-theme';
 const savedTheme = localStorage.getItem(themeKey);
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 

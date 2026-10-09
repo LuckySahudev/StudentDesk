@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudentDesk | Admin Dashboard</title>
     <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/dashboard-books.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
@@ -15,28 +17,10 @@
           <div class="logo-icon"><i class="ti ti-school"></i></div>
           <h1>Admin</h1>
         </div>
-        <div class="left-access"><button class="profile-img" aria-label="Profile"><i class="bi bi-person-circle"></i></button></div>
+        <div class="left-access"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i class="ti ti-sun"></i></button><a class="profile-img" href="/admin/settings" aria-label="Open profile and settings"><i class="bi bi-person-circle"></i></a></div>
       </nav>
     </header>
     <main>
-      <aside class="side-bar">
-        <div class="logo"><h4>Control Panel</h4></div>
-        <nav aria-label="Admin pages"><ul>
-            <li><a class="page-link active" aria-current="page" href="/admin/dashboard"><i class="ti ti-layout-dashboard"></i>Dashboard</a></li>
-            <li><a class="page-link" href="/admin/students"><i class="ti ti-users"></i>Students</a></li>
-            <li><a class="page-link" href="/admin/teachers"><i class="ti ti-school"></i>Teachers</a></li>
-            <li><a class="page-link" href="/admin/attendance"><i class="ti ti-calendar-event"></i>Attendance</a></li>
-            <li><a class="page-link" href="/admin/classes"><i class="ti ti-book"></i>Class</a></li>
-            <li><a class="page-link" href="/admin/fees"><i class="ti ti-currency-rupee"></i>Fees</a></li>
-            <li><a class="page-link" href="/admin/exams"><i class="ti ti-file-text"></i>Exams</a></li>
-            <li><a class="page-link" href="/admin/results"><i class="ti ti-chart-bar"></i>Results</a></li>
-            <li><a class="page-link" href="/admin/notices"><i class="ti ti-speakerphone"></i>Notices</a></li>
-            <li><a class="page-link" href="/admin/timetable"><i class="ti ti-clock"></i>Timetable</a></li>
-            <li><a class="page-link" href="/admin/analytics"><i class="ti ti-chart-line"></i>Analytics</a></li>
-            <li><a class="page-link" href="/admin/settings"><i class="ti ti-settings"></i>Settings</a></li>
-        </ul></nav>
-        <div class="sidebar-footer"><a href="/"><i class="ti ti-logout"></i> Logout</a></div>
-      </aside>
       <section class="container" aria-label="Dashboard">
         <div class="dashboard">
           <div class="great-panel">
@@ -61,29 +45,60 @@
               <p> 4.5 lakh </p>
             </div>
           </div>
+
+          <div class="notice-panel">
+            <div class="head">
+              <h4>Recent Notices</h4>
+              <i class="ti ti-chevron-up" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+              <p>Mid-semester examination schedule is ready to publish.</p>
+              <p>Teacher attendance must be submitted by 5:00 PM.</p>
+              <p>Admissions are open for the upcoming academic year.</p>
+            </div>
+          </div>
+
+          <section class="dashboard-shortcuts" aria-labelledby="admin-shortcuts-title">
+            <h3 id="admin-shortcuts-title">Choose a section</h3>
+            <div class="dashboard-link-grid">
+              <a class="dashboard-link" href="/admin/students"><i class="ti ti-users"></i>Students</a>
+              <a class="dashboard-link" href="/admin/teachers"><i class="ti ti-school"></i>Teachers</a>
+              <a class="dashboard-link" href="/admin/attendance"><i class="ti ti-calendar-event"></i>Attendance</a>
+              <a class="dashboard-link" href="/admin/classes"><i class="ti ti-book"></i>Classes</a>
+              <a class="dashboard-link" href="/admin/fees"><i class="ti ti-currency-rupee"></i>Fees</a>
+              <a class="dashboard-link" href="/admin/exams"><i class="ti ti-file-text"></i>Exams</a>
+              <a class="dashboard-link" href="/admin/results"><i class="ti ti-chart-bar"></i>Results</a>
+              <a class="dashboard-link" href="/admin/notices"><i class="ti ti-speakerphone"></i>Notices</a>
+              <a class="dashboard-link" href="/admin/timetable"><i class="ti ti-clock"></i>Timetable</a>
+              <a class="dashboard-link" href="/admin/analytics"><i class="ti ti-chart-line"></i>Analytics</a>
+              <a class="dashboard-link" href="/admin/settings"><i class="ti ti-settings"></i>Settings</a>
+            </div>
+          </section>
+
           <div class="recent-admition-panel">
             <div class="head">
               <h4>Recent Admissions</h4> 
               <i class="ti ti-chevron-up"></i>
             </div>
             <div class="recent-adimtion">
-              
+              <p>New admission applications will appear here.</p>
             </div>
           </div>
-          <div class="notice-panel">
-            <div class="head">
-              <h4>Notice</h4> 
-              <i class="ti ti-chevron-up"></i>
-            </div>
-          </div>
+          
           <div class="event-panel">
             <div class="head">
-              <h4>Event</h4> 
-              <i class="ti ti-chevron-up"></i>
+              <h4>Upcoming Events</h4>
+              <i class="ti ti-chevron-up" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+              <p>Academic review meeting · 12 June</p>
+              <p>Annual sports event · 20 June</p>
             </div>
           </div>
         </div>
       </section>
     </main>
+      <script src="/js/theme.js"></script>
+      <script src="/js/dashboard.js"></script>
   </body>
 </html>

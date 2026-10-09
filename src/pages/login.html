@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/theme.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
@@ -16,6 +17,9 @@
   </head>
 
   <body>
+    <button class="theme-toggle login-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <i class="ti ti-sun"></i>
+    </button>
     <div class="login-container">
       <div class="login-card">
         <div class="login-header">
@@ -66,5 +70,6 @@
         </div>
       </div>
     </div>
+    <script src="/js/theme.js"></script>
   </body>
 </html>

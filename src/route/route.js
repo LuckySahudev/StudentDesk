@@ -1,23 +1,18 @@
-const express = require("express");
-const router = express.Router();
+const express = require('express');
 const path = require('path');
-const adminController = require(path.resolve(__dirname,'../controller/adminController'));
-const studentController = require(path.resolve(__dirname,'../controller/studentController'));
-const teacherController = require(path.resolve(__dirname,'../controller/teacherController'));
 
-router.
-    get('/login', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/login.html')))
-    .get('/login/', (req, res) => res.sendFile(path.resolve(__dirname, '../pages/login.html')))
-    .get('/admin', adminController.getpage)
-    .get('/admin/', adminController.getpage)
-    .get('/admin/:page', adminController.getpage)
-    .get('/student', studentController.getpage)
-    .get('/student/', studentController.getpage)
-    .get('/student/:page', studentController.getpage)
-    .get('/teacher', teacherController.getpage)
-    .get('/teacher/', teacherController.getpage)
-    .get('/teacher/:page', teacherController.getpage);
+const router = express.Router();
+const studentRoutes = require('./studentRoutes');
+const teacherRoutes = require('./teacherRoutes');
+const adminRoutes = require('./adminRoutes');
+const auth = require('../middleware/auth');
 
+router.get('/login', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../pages/login.html'));
+});
 
+router.use('/student', auth, studentRoutes);
+router.use('/teacher', auth, teacherRoutes);
+router.use('/admin', auth, adminRoutes);
 
 module.exports = router;

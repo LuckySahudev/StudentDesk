@@ -1,0 +1,491 @@
+:root {
+  color-scheme: light;
+  --page-bg: #edf1f6;
+  --surface: #fafbfd;
+  --surface-raised: #f3f6fa;
+  --text-primary: #202b3e;
+  --text-secondary: #5e6b7f;
+  --border-color: #d5dce7;
+  --control-bg: #f8fafc;
+  --shadow-soft: 0 5px 18px rgba(32, 48, 76, 0.07);
+}
+
+body {
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body:not(.dark-mode) {
+  background: var(--page-bg) !important;
+}
+
+body:not(.dark-mode) .nav-bar {
+  background: linear-gradient(112deg, #465779, #53658a 58%, #617493) !important;
+  border-bottom: 1px solid rgba(44, 59, 86, 0.18);
+  box-shadow: 0 3px 12px rgba(32, 48, 76, 0.12);
+}
+
+body:not(.dark-mode) .great-panel,
+body:not(.dark-mode) .detail-card,
+body:not(.dark-mode) .notice-panel,
+body:not(.dark-mode) .event-panel,
+body:not(.dark-mode) .timetable-preview,
+body:not(.dark-mode) .attendance-table,
+body:not(.dark-mode) .settings-card,
+body:not(.dark-mode) .page-header,
+body:not(.dark-mode) .stat-card,
+body:not(.dark-mode) .result-stats,
+body:not(.dark-mode) .exam-stats,
+body:not(.dark-mode) .notice-stats,
+body:not(.dark-mode) .material-stats,
+body:not(.dark-mode) .fee-stats,
+body:not(.dark-mode) .student-stats,
+body:not(.dark-mode) .teacher-stats,
+body:not(.dark-mode) .class-stats,
+body:not(.dark-mode) .dashboard-card,
+body:not(.dark-mode) .profile-card,
+body:not(.dark-mode) .page-content,
+body:not(.dark-mode) .container [class*="-card"],
+body:not(.dark-mode) .container [class*="-panel"],
+body:not(.dark-mode) .container [class*="-table"],
+body:not(.dark-mode) .container [class*="-stats"],
+body:not(.dark-mode) .container [class*="-filters"],
+body:not(.dark-mode) .container [class*="-preview"] {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+body:not(.dark-mode) .dashboard-shortcuts {
+  background: linear-gradient(135deg, #f8fafc, #f1f4f8);
+  border-color: var(--border-color);
+}
+
+.dashboard .great-panel {
+  padding: 1.15rem 1.3rem;
+  border-radius: 14px;
+}
+
+body:not(.dark-mode) .container .dashboard .detail-panel {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body:not(.dark-mode) .back-to-dashboard {
+  border-color: var(--border-color);
+  background: #f8fafc;
+  color: #465779;
+}
+
+.container > .back-to-dashboard {
+  display: flex;
+  width: fit-content;
+  margin: 1rem 1rem 0 auto;
+}
+
+.container .page-head > .back-to-dashboard,
+.container .page-header > .back-to-dashboard {
+  display: flex;
+  width: fit-content;
+  flex: 0 0 auto;
+  align-items: center;
+  margin: 0 0 0 auto;
+  white-space: nowrap;
+}
+
+body:not(.dark-mode) input,
+body:not(.dark-mode) select,
+body:not(.dark-mode) textarea {
+  border-color: var(--border-color);
+  background: var(--control-bg);
+  color: var(--text-primary);
+}
+
+.nav-bar,
+.side-bar,
+.container,
+.great-panel,
+.detail-card,
+.notice-panel,
+.event-panel,
+.timetable-preview,
+.attendance-table,
+.settings-card,
+.page-header,
+.stat-card,
+.dashboard-shortcuts,
+.login-card,
+input,
+select,
+textarea {
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.left-access {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 3px;
+}
+
+body.dark-mode {
+  color-scheme: dark;
+  --page-bg: #0b1220;
+  --surface: #111c2e;
+  --surface-raised: #172338;
+  --text-primary: #e7edf7;
+  --text-secondary: #a4b1c5;
+  --border-color: #2b3950;
+  --control-bg: #0d1728;
+  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.24);
+  background: var(--page-bg) !important;
+  color: var(--text-primary);
+}
+
+body.dark-mode .nav-bar {
+  background: linear-gradient(115deg, #202c55, #293c78 58%, #393b79) !important;
+  border-bottom-color: #2b3950;
+}
+
+body.dark-mode .profile-img {
+  color: #eef2ff;
+}
+
+body.dark-mode .side-bar,
+body.dark-mode .container,
+body.dark-mode .great-panel,
+body.dark-mode .detail-card,
+body.dark-mode .notice-panel,
+body.dark-mode .event-panel,
+body.dark-mode .timetable-preview,
+body.dark-mode .attendance-table,
+body.dark-mode .settings-card,
+body.dark-mode .page-header,
+body.dark-mode .stat-card,
+body.dark-mode .result-stats,
+body.dark-mode .exam-stats,
+body.dark-mode .notice-stats,
+body.dark-mode .material-stats,
+body.dark-mode .fee-stats,
+body.dark-mode .student-stats,
+body.dark-mode .teacher-stats,
+body.dark-mode .class-stats,
+body.dark-mode .dashboard-card,
+body.dark-mode .profile-card,
+body.dark-mode .page-content,
+body.dark-mode .dashboard-shortcuts,
+body.dark-mode .container [class*="-card"],
+body.dark-mode .container [class*="-panel"],
+body.dark-mode .container [class*="-table"],
+body.dark-mode .container [class*="-stats"],
+body.dark-mode .container [class*="-filters"],
+body.dark-mode .container [class*="-preview"] {
+  background-color: var(--surface) !important;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+body.dark-mode .dashboard-shortcuts {
+  background: linear-gradient(135deg, #111c2e, #172338) !important;
+}
+
+body.dark-mode .container .dashboard .detail-panel {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+body.dark-mode .container [class*="-card"],
+body.dark-mode .container [class*="-panel"],
+body.dark-mode .container [class*="-table"],
+body.dark-mode .container [class*="-stats"],
+body.dark-mode .container [class*="-filters"],
+body.dark-mode .container [class*="-preview"],
+body.dark-mode .great-panel,
+body.dark-mode .detail-card,
+body.dark-mode .notice-panel,
+body.dark-mode .event-panel,
+body.dark-mode .timetable-preview,
+body.dark-mode .attendance-table,
+body.dark-mode .settings-card,
+body.dark-mode .dashboard-shortcuts {
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode label,
+body.dark-mode th,
+body.dark-mode td,
+body.dark-mode .mess,
+body.dark-mode .page-header h2,
+body.dark-mode .detail-card h3,
+body.dark-mode .detail-card p,
+body.dark-mode .date {
+  color: var(--text-primary);
+}
+
+body.dark-mode .container h1,
+body.dark-mode .container h2,
+body.dark-mode .container h3,
+body.dark-mode .container h4,
+body.dark-mode .container h5,
+body.dark-mode .container h6,
+body.dark-mode .container label,
+body.dark-mode .container th,
+body.dark-mode .container td {
+  color: var(--text-primary);
+}
+
+body.dark-mode p,
+body.dark-mode .page-header p,
+body.dark-mode .content p,
+body.dark-mode .settings-card p,
+body.dark-mode .detail-card h3 {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .container p {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .container .content p,
+body.dark-mode .container li,
+body.dark-mode .container .detail-row,
+body.dark-mode .container .setting-group {
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  border-color: var(--border-color);
+  background: var(--control-bg);
+  color: var(--text-primary);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #8291a8;
+}
+
+body.dark-mode table,
+body.dark-mode .container table,
+body.dark-mode .container tbody tr,
+body.dark-mode th,
+body.dark-mode td,
+body.dark-mode .setting-group,
+body.dark-mode .detail-row {
+  border-color: var(--border-color);
+}
+
+body.dark-mode .container table {
+  background: var(--surface) !important;
+}
+
+body.dark-mode .container thead,
+body.dark-mode .container thead tr,
+body.dark-mode .container thead th {
+  background: #202d43 !important;
+  color: #e7edf7 !important;
+}
+
+body.dark-mode .container tbody tr {
+  background: var(--surface) !important;
+}
+
+body.dark-mode .container tbody tr:nth-child(even) {
+  background: var(--surface-raised) !important;
+}
+
+body.dark-mode .container tbody td {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .side-bar {
+  border-right-color: var(--border-color);
+}
+
+body.dark-mode .side-bar a.page-link {
+  color: #cbd5e1;
+}
+
+body.dark-mode .side-bar a.page-link.active {
+  background: #302b62;
+  color: #d5ceff;
+}
+
+body.dark-mode .side-bar a.page-link:hover {
+  background: #202d43;
+}
+
+body.dark-mode .back-to-dashboard {
+  border-color: var(--border-color);
+  background: var(--surface);
+  color: #c4b5fd;
+}
+
+body.dark-mode .login-card {
+  border: 1px solid var(--border-color);
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .login-header p,
+body.dark-mode .role-info p {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .login-theme-toggle {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.login-theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+body:not(.dark-mode) .login-container {
+  background: linear-gradient(135deg, #465779, #617493);
+}
+
+body:not(.dark-mode) .login-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: #fafbfd;
+  box-shadow: 0 18px 48px rgba(27, 41, 65, 0.2);
+}
+
+body.dark-mode .login-container {
+  background: linear-gradient(135deg, #0b1220, #172342 54%, #25235a);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .theme-toggle {
+    transition: none;
+  }
+}
+
+/* Keep student page headings aligned without treating them as content cards. */
+.container > :is(.Profile, .Attendance, .Fees, .Exam, .Result, .Timetable, .Notice, .StudyMaterial, .Settings, .Student, .Teacher, .Classes, .Analytics, .MyClasses, .Students) > :is(.page-header, .page-head) {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.container > :is(.Profile, .Attendance, .Fees, .Exam, .Result, .Timetable, .Notice, .StudyMaterial, .Settings, .Student, .Teacher, .Classes, .Analytics, .MyClasses, .Students) > :is(.page-header, .page-head) > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.container > :is(.Profile, .Attendance, .Fees, .Exam, .Result, .Timetable, .Notice, .StudyMaterial, .Settings, .Student, .Teacher, .Classes, .Analytics, .MyClasses, .Students) > :is(.page-header, .page-head) > .back-to-dashboard {
+  flex: 0 0 auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.container > .Profile > .page-header > .edit-profile-btn {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .container > :is(.Profile, .Attendance, .Fees, .Exam, .Result, .Timetable, .Notice, .StudyMaterial, .Settings, .Student, .Teacher, .Classes, .Analytics, .MyClasses, .Students) > :is(.page-header, .page-head) {
+    flex-wrap: wrap;
+  }
+
+  .container > :is(.Profile, .Attendance, .Fees, .Exam, .Result, .Timetable, .Notice, .StudyMaterial, .Settings, .Student, .Teacher, .Classes, .Analytics, .MyClasses, .Students) > :is(.page-header, .page-head) > div:first-child {
+    flex: 1 1 100%;
+  }
+}
+
+/* Keep the stat cards styled while removing the extra panel around each grid. */
+body:not(.dark-mode) .container .Attendance .attendance-stats,
+body:not(.dark-mode) .container .Fees .fee-stats,
+body:not(.dark-mode) .container .Exam .exam-stats,
+body:not(.dark-mode) .container .Result .result-stats,
+body:not(.dark-mode) .container .Notice .notice-stats,
+body:not(.dark-mode) .container .StudyMaterial .material-stats,
+body.dark-mode .container .Attendance .attendance-stats,
+body.dark-mode .container .Fees .fee-stats,
+body.dark-mode .container .Exam .exam-stats,
+body.dark-mode .container .Result .result-stats,
+body.dark-mode .container .Notice .notice-stats,
+body.dark-mode .container .StudyMaterial .material-stats {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Admin and teacher statistic grids use the same unframed layout. */
+body:not(.dark-mode) .container .Student .student-stats,
+body:not(.dark-mode) .container .Teacher .teacher-stats,
+body:not(.dark-mode) .container .Attendance .attendance-stats,
+body:not(.dark-mode) .container .Classes .class-stats,
+body:not(.dark-mode) .container .Fees .fee-stats,
+body:not(.dark-mode) .container .Exam .exam-stats,
+body:not(.dark-mode) .container .Result .result-stats,
+body:not(.dark-mode) .container .Notice .notice-stats,
+body:not(.dark-mode) .container .Timetable .timetable-stats,
+body:not(.dark-mode) .container .StudyMaterial .material-stats,
+body.dark-mode .container .Student .student-stats,
+body.dark-mode .container .Teacher .teacher-stats,
+body.dark-mode .container .Attendance .attendance-stats,
+body.dark-mode .container .Classes .class-stats,
+body.dark-mode .container .Fees .fee-stats,
+body.dark-mode .container .Exam .exam-stats,
+body.dark-mode .container .Result .result-stats,
+body.dark-mode .container .Notice .notice-stats,
+body.dark-mode .container .Timetable .timetable-stats,
+body.dark-mode .container .StudyMaterial .material-stats {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
