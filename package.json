@@ -11,10 +11,14 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-pg-simple": "^10.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
     "mongodb": "^7.2.0",
-    "mongoose": "^9.5.0"
+    "mongoose": "^9.5.0",
+    "pg": "^8.23.1"
   }
 }

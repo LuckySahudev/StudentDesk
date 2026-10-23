@@ -24,42 +24,40 @@
       <section class="container" aria-label="Dashboard">
         <div class="dashboard">
           <div class="great-panel">
-            <h3 class="mess">Welcome Back, Rahul 👋</h3>
+            <h3 class="mess">Welcome back, <span id="student-name">Student</span> 👋</h3>
             <div class="date">Today is 01 June 2026</div>
           </div>
 
           <div class="detail-panel">
             <div class="detail-card">
               <h3>Attendance</h3>
-              <p>92%</p>
+              <p id="attendance-value">—</p>
             </div>
 
             <div class="detail-card">
               <h3>Current Class</h3>
-              <p>CSE 3rd Year</p>
+              <p id="class-value">Not assigned</p>
             </div>
 
             <div class="detail-card">
               <h3>Fee Status</h3>
-              <p>Paid</p>
+              <p id="fee-status-value">—</p>
             </div>
 
             <div class="detail-card">
-              <h3>CGPA</h3>
-              <p>8.4</p>
+              <h3>Subjects</h3>
+              <p id="subject-count-value">0</p>
             </div>
           </div>
 
           <div class="notice-panel">
             <div class="head">
-              <h4>Recent Notices</h4>
+              <h4>Recent and Upcoming Notices</h4>
               <i class="ti ti-chevron-up"></i>
             </div>
 
             <div class="content">
-              <p>📢 Mid Semester Exam starts from 10 June.</p>
-              <p>📢 Placement Drive registration is open.</p>
-              <p>📢 Annual Sports Event on 15 June.</p>
+              <div id="student-notices"><p>Loading notices...</p></div>
             </div>
           </div>
 
@@ -73,8 +71,6 @@
               <a class="dashboard-link" href="/student/results"><i class="ti ti-chart-bar"></i>Results</a>
               <a class="dashboard-link" href="/student/timetable"><i class="ti ti-clock"></i>Timetable</a>
               <a class="dashboard-link" href="/student/notices"><i class="ti ti-speakerphone"></i>Notices</a>
-              <a class="dashboard-link" href="/student/study-material"><i class="ti ti-book"></i>Study material</a>
-              <a class="dashboard-link" href="/student/settings"><i class="ti ti-settings"></i>Settings</a>
             </div>
           </section>
 
@@ -82,28 +78,24 @@
 
           <div class="event-panel">
             <div class="head">
-              <h4>Upcoming Events</h4>
+              <h4>Fee Summary</h4>
               <i class="ti ti-chevron-up"></i>
             </div>
 
             <div class="content">
-              <p>📅 Mid Semester Exam - 10 June</p>
-              <p>📅 Placement Drive - 15 June</p>
-              <p>📅 Sports Event - 20 June</p>
+              <p id="fee-summary-value">Loading fee summary...</p>
+              <p id="fee-due-value"></p>
             </div>
           </div>
 
           <div class="timetable-preview">
             <div class="head">
-              <h4>Today's Classes</h4>
+              <h4>My Subjects</h4>
               <i class="ti ti-chevron-up"></i>
             </div>
 
             <div class="content">
-              <p>09:00 - Mathematics</p>
-              <p>10:00 - Physics</p>
-              <p>11:30 - Computer Science</p>
-              <p>12:30 - English</p>
+              <div id="student-subjects"><p>Loading subjects...</p></div>
             </div>
           </div>
         </div>

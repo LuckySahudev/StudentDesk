@@ -10,112 +10,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-bar">
-        <div class="logo">
-          <div class="logo-icon"><i class="ti ti-school"></i></div>
-          <h1>Admin</h1>
-        </div>
-        <div class="left-access"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i class="ti ti-sun"></i></button><button class="profile-img" aria-label="Profile"><i class="bi bi-person-circle"></i></button></div>
-      </nav>
-    </header>
-    <main>
-<section class="container" aria-label="Students">
-        
-        <div class="Student">
-          <div class="page-header">
-            <div>
-              <h2>Students Management</h2>
-              <p>Manage all student records</p>
-            </div>
+    <header><nav class="nav-bar"><div class="logo"><div class="logo-icon"><i class="ti ti-school"></i></div><h1>Admin</h1></div><div class="left-access"><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><i class="ti ti-sun"></i></button><button class="profile-img" aria-label="Profile"><i class="bi bi-person-circle"></i></button></div></nav></header>
+    <main><section class="container" aria-label="Students"><div class="Student">
+      <div class="page-header"><div><h2>Students Management</h2><p>Manage student details and class enrollment</p></div><button class="add-student-btn" id="add-student" type="button"><i class="ti ti-plus"></i> Add Student</button><a class="back-to-dashboard" href="/admin/"><i class="ti ti-arrow-left"></i>Back to Dashboard</a></div>
+      <p class="student-message" id="student-message" role="status" aria-live="polite"></p>
+      <div class="student-stats"><div class="stat-card"><h4>Total Students</h4><h2 id="total-students">—</h2></div><div class="stat-card"><h4>Assigned to a Class</h4><h2 id="assigned-students">—</h2></div><div class="stat-card"><h4>With Contact Details</h4><h2 id="contact-students">—</h2></div><div class="stat-card"><h4>Academic Sessions</h4><h2 id="session-count">—</h2></div></div>
+      <div class="student-filters"><input id="student-search" type="search" placeholder="Search name, admission number, phone, or email" aria-label="Search students" /></div>
+      <div class="student-table"><table><thead><tr><th>Admission No.</th><th>Student</th><th>Gender</th><th>Class</th><th>Academic Year</th><th>Phone</th><th>Email</th><th>Actions</th></tr></thead><tbody id="students-body"><tr><td colspan="8">Loading student records…</td></tr></tbody></table></div>
+    </div></section></main>
 
-            <button class="add-student-btn">
-              <i class="ti ti-plus"></i>
-              Add Student
-            </button>
-          
-              <a class="back-to-dashboard" href="/admin/"><i class="ti ti-arrow-left"></i>Back to Dashboard</a>
-            </div>
-
-          <div class="student-stats">
-            <div class="stat-card">
-              <h4>Total Students</h4>
-              <h2>1230</h2>
-            </div>
-
-            <div class="stat-card">
-              <h4>Active Students</h4>
-              <h2>1190</h2>
-            </div>
-
-            <div class="stat-card">
-              <h4>New Admissions</h4>
-              <h2>45</h2>
-            </div>
-
-            <div class="stat-card">
-              <h4>Graduated</h4>
-              <h2>120</h2>
-            </div>
-          </div>
-
-          <div class="student-filters">
-            <input type="text" placeholder="Search student..." />
-
-            <select>
-              <option>All Classes</option>
-              <option>KG</option>
-              <option>1st</option>
-              <option>2nd</option>
-              <option>12th</option>
-            </select>
-          </div>
-
-          <div class="student-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Class</th>
-                  <th>Contact</th>
-                  <th>Status</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>101</td>
-                  <td>Rahul Sharma</td>
-                  <td>12th A</td>
-                  <td>9876543210</td>
-                  <td>Active</td>
-                  <td>
-                    <button><i class="ti ti-eye"></i></button>
-                    <button><i class="ti ti-edit"></i></button>
-                    <button><i class="ti ti-trash"></i></button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>102</td>
-                  <td>Priya Patel</td>
-                  <td>11th B</td>
-                  <td>9876543211</td>
-                  <td>Active</td>
-                  <td>
-                    <button><i class="ti ti-eye"></i></button>
-                    <button><i class="ti ti-edit"></i></button>
-                    <button><i class="ti ti-trash"></i></button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-    </main>
-      <script src="/js/theme.js"></script>
+    <dialog id="student-dialog" class="student-dialog"><form id="student-form">
+      <div class="student-dialog-head"><div><h2 id="form-title">Add student</h2><p>Enter the fields stored in the students database table.</p></div><button id="close-dialog" class="student-close" type="button" aria-label="Close">×</button></div>
+      <input id="student-id" type="hidden" />
+      <div class="student-form-grid">
+        <label>Student ID <span>*</span><input name="student_id" type="number" min="1" required /></label>
+        <label>Admission number <span>*</span><input name="admission_no" type="number" min="1" required /></label>
+        <label>First name <span>*</span><input name="first_name" maxlength="100" required /></label>
+        <label>Last name<input name="last_name" maxlength="100" /></label>
+        <label>Gender<select name="gender"><option value="">Not specified</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+        <label>Date of birth<input name="date_of_birth" type="date" /></label>
+        <label>Admission date<input name="admission_date" type="date" /></label>
+        <label>Phone<input name="phone" type="tel" maxlength="30" /></label>
+        <label>Email<input name="email" type="email" maxlength="254" /></label>
+        <label>Class<select name="class_id" id="class-id"><option value="">Not assigned</option></select></label>
+        <label>Roll number<input name="roll_no" type="number" min="1" /></label>
+        <label>Academic session<select name="session_id" id="session-id"><option value="">Not assigned</option></select></label>
+        <label class="student-address">Address<textarea name="address" rows="3" maxlength="2000"></textarea></label>
+      </div>
+      <p class="student-form-hint">Class, roll number, and academic session must be selected together.</p>
+      <div class="student-form-actions"><button class="student-cancel" id="cancel-dialog" type="button">Cancel</button><button class="add-student-btn" id="save-student" type="submit">Save Student</button></div>
+    </form></dialog>
+    <script src="/js/theme.js"></script><script src="/js/admin-students.js"></script>
   </body>
 </html>

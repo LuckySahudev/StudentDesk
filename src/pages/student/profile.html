@@ -20,99 +20,71 @@
       </nav>
     </header>
     <main>
-<section class="container" aria-label="Profile">
-        
+      <section class="container" aria-label="Student profile">
         <div class="Profile">
           <div class="page-header">
             <div>
               <h2>My Profile</h2>
-              <p>View and manage your personal information</p>
+              <p>View your student and guardian information</p>
             </div>
-
-            <button class="edit-profile-btn">
-              <i class="ti ti-edit"></i>
-              Edit Profile
-            </button>
-          
+            <div class="profile-page-actions">
+              <button class="edit-profile-btn" id="edit-profile" type="button" disabled>
+                <i class="ti ti-edit"></i> Edit Profile
+              </button>
               <a class="back-to-dashboard" href="/student/"><i class="ti ti-arrow-left"></i>Back to Dashboard</a>
-            </div>
-
-          <div class="profile-card">
-            <div class="profile-info">
-              <div class="profile-image">
-                <i class="bi bi-person-circle"></i>
-              </div>
-
-              <div class="profile-details">
-                <div class="detail-row">
-                  <strong>Name:</strong>
-                  <span>Rahul Sharma</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Roll Number:</strong>
-                  <span>2023CSE101</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Class:</strong>
-                  <span>CSE 3rd Year</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Section:</strong>
-                  <span>A</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Email:</strong>
-                  <span>rahul@gmail.com</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Phone:</strong>
-                  <span>9876543210</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Date of Birth:</strong>
-                  <span>12 March 2004</span>
-                </div>
-
-                <div class="detail-row">
-                  <strong>Address:</strong>
-                  <span>Bhopal, Madhya Pradesh</span>
-                </div>
-              </div>
             </div>
           </div>
 
+          <p id="profile-message" role="status" aria-live="polite">Loading profile...</p>
+
+          <form id="profile-form" class="profile-card">
+            <div class="profile-info">
+              <div class="profile-image"><i class="bi bi-person-circle"></i></div>
+              <div class="profile-details">
+                <div class="detail-row">
+                  <strong>Name:</strong><span id="profile-name">—</span>
+                  <div class="profile-name-edit" data-edit hidden><input name="first_name" maxlength="100" aria-label="First name" required /><input name="last_name" maxlength="100" aria-label="Last name" /></div>
+                </div>
+                <div class="detail-row"><strong>Student ID:</strong><span id="profile-student-id">—</span></div>
+                <div class="detail-row"><strong>Admission Number:</strong><span id="profile-admission-no">—</span></div>
+                <div class="detail-row"><strong>Date of Birth:</strong><span id="profile-dob">—</span><input data-edit name="date_of_birth" type="date" hidden /></div>
+                <div class="detail-row"><strong>Gender:</strong><span id="profile-gender">—</span><select data-edit name="gender" hidden><option value="">Not specified</option><option>Female</option><option>Male</option><option>Other</option></select></div>
+                <div class="detail-row">
+                  <strong>Email:</strong><span data-display="email">—</span>
+                  <input data-edit="email" name="email" type="email" maxlength="100" autocomplete="email" hidden />
+                </div>
+                <div class="detail-row">
+                  <strong>Phone:</strong><span data-display="phone">—</span>
+                  <input data-edit="phone" name="phone" type="tel" maxlength="30" autocomplete="tel" hidden />
+                </div>
+                <div class="detail-row">
+                  <strong>Address:</strong><span data-display="address">—</span>
+                  <textarea data-edit="address" name="address" maxlength="2000" rows="3" autocomplete="street-address" hidden></textarea>
+                </div>
+                <div class="profile-edit-actions" id="profile-edit-actions" hidden>
+                  <button class="view-btn" type="submit">Save changes</button>
+                  <button class="view-btn" id="cancel-profile-edit" type="button">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
           <div class="academic-card">
             <h3>Academic Information</h3>
+            <div class="detail-row"><strong>Class:</strong><span id="profile-class">—</span></div>
+            <div class="detail-row"><strong>Roll Number:</strong><span id="profile-roll-no">—</span></div>
+            <div class="detail-row"><strong>Academic Year:</strong><span id="profile-academic-year">—</span></div>
+            <div class="detail-row"><strong>Admission Date:</strong><span id="profile-admission-date">—</span></div>
+          </div>
 
-            <div class="detail-row">
-              <strong>Course:</strong>
-              <span>B.Tech CSE</span>
-            </div>
-
-            <div class="detail-row">
-              <strong>Semester:</strong>
-              <span>6th Semester</span>
-            </div>
-
-            <div class="detail-row">
-              <strong>CGPA:</strong>
-              <span>8.4</span>
-            </div>
-
-            <div class="detail-row">
-              <strong>Attendance:</strong>
-              <span>92%</span>
-            </div>
+          <div class="academic-card">
+            <h3>Guardian Information</h3>
+            <div id="profile-guardians"><p>Loading guardian information...</p></div>
           </div>
         </div>
       </section>
     </main>
       <script src="/js/theme.js"></script>
+      <script src="/js/student-profile.js"></script>
   </body>
 </html>

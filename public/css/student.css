@@ -382,6 +382,79 @@ main{
   background: #4f46e5;
 }
 
+.profile-page-actions,
+.profile-edit-actions{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.Profile [hidden]{
+  display: none !important;
+}
+
+.Profile .detail-row input,
+.Profile .detail-row textarea,
+.Profile .detail-row select{
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  max-width: 32rem;
+  padding: .65rem .75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.Profile .profile-name-edit{display:flex;flex:1;gap:.5rem;min-width:0;max-width:32rem}
+.Profile .profile-name-edit input{width:50%;max-width:none}
+
+.profile-guardian{
+  padding: .75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-guardian:last-child{
+  border-bottom: none;
+}
+
+.profile-guardian h4{
+  margin: .25rem 0;
+}
+
+#profile-message:empty{
+  display: none;
+}
+
+@media (max-width: 700px){
+  .Profile .page-header{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .75rem;
+  }
+
+  .profile-page-actions{
+    width: 100%;
+  }
+
+  .Profile .detail-row{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .Profile .detail-row strong,
+  .Profile .detail-row input,
+  .Profile .detail-row textarea,
+  .Profile .detail-row select{
+    width: 100%;
+    max-width: none;
+  }
+
+  .Profile .profile-name-edit{width:100%;max-width:none}
+}
+
 
 
 
@@ -516,6 +589,28 @@ main{
   grid-template-columns: repeat(4,1fr);
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.fee-history-title{
+  margin: 1.5rem 0 .75rem;
+}
+
+.fee-message{
+  min-height: 1.25rem;
+  margin-top: .75rem;
+}
+
+.fee-table{
+  overflow-x: auto;
+}
+
+.fee-table table{
+  min-width: 760px;
+}
+
+@media (max-width: 700px){
+  .fee-stats{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .Fees .page-head{ align-items: flex-start; gap: .75rem; flex-wrap: wrap; }
 }
 
 .fee-filters{
@@ -888,6 +983,7 @@ main{
   margin-bottom: 1rem;
 }
 
+.notice-filters input,
 .notice-filters select{
   padding: 10px;
   border: 1px solid #ddd;
@@ -895,6 +991,10 @@ main{
   outline: none;
 }
 
+.notice-filters input{flex:1;min-width:0}
+.notice-filters select{min-width:180px}
+
+.notice-filters input:focus,
 .notice-filters select:focus{
   border-color: #6366f1;
 }

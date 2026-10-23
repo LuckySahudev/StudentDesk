@@ -26,7 +26,7 @@
           <div class="page-head">
             <div>
               <h2>Notices</h2>
-              <p>View latest school announcements and updates</p>
+              <p>View current and upcoming school-wide and class notices</p>
             </div>
           
               <a class="back-to-dashboard" href="/student/"><i class="ti ti-arrow-left"></i>Back to Dashboard</a>
@@ -34,40 +34,33 @@
 
           <div class="notice-stats">
             <div class="stat-card">
-              <h4>Total Notices</h4>
-              <h2>15</h2>
+              <h4>Current Notices</h4>
+              <h2 id="notice-total">—</h2>
             </div>
 
             <div class="stat-card">
-              <h4>Unread</h4>
-              <h2>3</h2>
+              <h4>Class Notices</h4>
+              <h2 id="notice-class-total">—</h2>
             </div>
 
             <div class="stat-card">
-              <h4>This Month</h4>
-              <h2>8</h2>
+              <h4>School-wide</h4>
+              <h2 id="notice-school-total">—</h2>
             </div>
 
             <div class="stat-card">
-              <h4>Important</h4>
-              <h2>2</h2>
+              <h4>Latest Date</h4>
+              <h2 id="notice-latest-date">—</h2>
             </div>
           </div>
 
           <div class="notice-filters">
-            <select>
-              <option selected disabled>Category</option>
-              <option>Academic</option>
-              <option>Examination</option>
-              <option>Sports</option>
-              <option>Events</option>
-              <option>Holiday</option>
+            <input id="notice-search" type="search" placeholder="Search notices..." aria-label="Search notices" />
+            <select id="notice-audience" aria-label="Filter by audience">
+              <option value="all">All audiences</option>
+              <option value="class">Class notices</option>
+              <option value="school">School-wide</option>
             </select>
-
-            <button class="view-btn">
-              <i class="ti ti-search"></i>
-              View
-            </button>
           </div>
 
           <div class="notice-table">
@@ -76,39 +69,15 @@
                 <tr>
                   <th>Date</th>
                   <th>Title</th>
-                  <th>Category</th>
-                  <th>Priority</th>
+                  <th>Notice</th>
+                  <th>Audience</th>
+                  <th>Posted by</th>
+                  <th>Expires</th>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  <td>01 Jun 2026</td>
-                  <td>Quarterly Examination Schedule Released</td>
-                  <td>Examination</td>
-                  <td>High</td>
-                </tr>
-
-                <tr>
-                  <td>05 Jun 2026</td>
-                  <td>Summer Vacation Announcement</td>
-                  <td>Holiday</td>
-                  <td>Medium</td>
-                </tr>
-
-                <tr>
-                  <td>10 Jun 2026</td>
-                  <td>Annual Sports Meet Registration</td>
-                  <td>Sports</td>
-                  <td>Low</td>
-                </tr>
-
-                <tr>
-                  <td>12 Jun 2026</td>
-                  <td>Science Exhibition Participation Form</td>
-                  <td>Events</td>
-                  <td>Medium</td>
-                </tr>
+                <tr><td colspan="6" id="notice-table-message">Loading notices...</td></tr>
               </tbody>
             </table>
           </div>
@@ -116,5 +85,6 @@
       </section>
     </main>
       <script src="/js/theme.js"></script>
+      <script src="/js/student-notices.js"></script>
   </body>
 </html>

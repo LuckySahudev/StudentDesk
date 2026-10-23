@@ -26,24 +26,25 @@
           <div class="page-head">
             <div>
               <h2>Timetable</h2>
-              <p>View your class schedule</p>
+              <p id="timetable-enrollment">Loading your class schedule...</p>
             </div>
           
               <a class="back-to-dashboard" href="/student/"><i class="ti ti-arrow-left"></i>Back to Dashboard</a>
             </div>
 
           <div class="timetable-filters">
-            <select>
-              <option selected disabled>Select Day</option>
+            <select id="timetable-day" aria-label="Filter timetable by day">
+              <option value="all">All days</option>
               <option>Monday</option>
               <option>Tuesday</option>
               <option>Wednesday</option>
               <option>Thursday</option>
               <option>Friday</option>
               <option>Saturday</option>
+              <option>Sunday</option>
             </select>
 
-            <button class="view-btn">
+            <button class="view-btn" id="timetable-view" type="button">
               <i class="ti ti-search"></i>
               View
             </button>
@@ -53,60 +54,15 @@
             <table>
               <thead>
                 <tr>
+                  <th>Day</th>
                   <th>Period</th>
-                  <th>Time</th>
                   <th>Subject</th>
                   <th>Teacher</th>
-                  <th>Room</th>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>08:00 - 08:45</td>
-                  <td>Mathematics</td>
-                  <td>Mr. Sharma</td>
-                  <td>101</td>
-                </tr>
-
-                <tr>
-                  <td>2</td>
-                  <td>08:45 - 09:30</td>
-                  <td>Science</td>
-                  <td>Mrs. Gupta</td>
-                  <td>101</td>
-                </tr>
-
-                <tr>
-                  <td>3</td>
-                  <td>09:30 - 10:15</td>
-                  <td>English</td>
-                  <td>Mr. Singh</td>
-                  <td>101</td>
-                </tr>
-
-                <tr>
-                  <td>Break</td>
-                  <td>10:15 - 10:30</td>
-                  <td colspan="3">Short Break</td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td>10:30 - 11:15</td>
-                  <td>Social Science</td>
-                  <td>Mrs. Patel</td>
-                  <td>101</td>
-                </tr>
-
-                <tr>
-                  <td>5</td>
-                  <td>11:15 - 12:00</td>
-                  <td>Computer</td>
-                  <td>Mr. Verma</td>
-                  <td>Lab-1</td>
-                </tr>
+                <tr><td colspan="4" id="timetable-message">Loading timetable...</td></tr>
               </tbody>
             </table>
           </div>
@@ -114,5 +70,6 @@
       </section>
     </main>
       <script src="/js/theme.js"></script>
+      <script src="/js/student-timetable.js"></script>
   </body>
 </html>

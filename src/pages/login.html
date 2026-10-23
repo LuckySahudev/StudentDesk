@@ -31,12 +31,12 @@
           <p>Sign in to continue</p>
         </div>
 
-        <form>
+        <form id="login-form" novalidate>
 
           <div class="input-group">
-            <label>Role</label>
-            <select>
-              <option selected disabled>Select Role</option>
+            <label for="login-role">Role</label>
+            <select id="login-role" name="role" required>
+              <option value="" selected disabled>Select Role</option>
               <option value="admin">Admin</option>
               <option value="teacher">Teacher</option>
               <option value="student">Student</option>
@@ -44,25 +44,26 @@
           </div>
 
           <div class="input-group">
-            <label>Email / Username</label>
-            <input type="text" placeholder="Enter username" />
+            <label id="user-id-label" for="user-id">Student ID</label>
+            <input id="user-id" name="userId" type="text" inputmode="numeric" autocomplete="username" placeholder="Enter your student ID" required />
           </div>
 
           <div class="input-group">
-            <label>Password</label>
-            <input type="password" placeholder="Enter password" />
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required />
           </div>
 
           <div class="options">
             <label>
-              <input type="checkbox" />
+              <input name="remember" type="checkbox" />
               Remember Me
             </label>
 
-            <a href="#">Forgot Password?</a>
+            <span>Session expires after 8 hours</span>
           </div>
 
-          <button class="login-btn">Login</button>
+          <p id="login-error" role="alert" aria-live="polite"></p>
+          <button class="login-btn" type="submit">Login</button>
         </form>
 
         <div class="role-info">
@@ -71,5 +72,6 @@
       </div>
     </div>
     <script src="/js/theme.js"></script>
+    <script src="/js/login.js"></script>
   </body>
 </html>

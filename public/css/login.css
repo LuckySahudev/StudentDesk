@@ -99,9 +99,17 @@ body{
   font-size:.9rem;
 }
 
-.options a{
+.options span{
   text-decoration:none;
   color:#6366f1;
+  text-align:right;
+}
+
+#login-error{
+  min-height:1.25rem;
+  margin-bottom:.75rem;
+  color:#b91c1c;
+  font-size:.9rem;
 }
 
 .login-btn{
@@ -117,6 +125,11 @@ body{
 
 .login-btn:hover{
   background:#4f46e5;
+}
+
+.login-btn:disabled{
+  cursor:wait;
+  opacity:.7;
 }
 
 .role-info{
